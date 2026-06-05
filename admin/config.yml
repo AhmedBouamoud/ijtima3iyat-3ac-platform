@@ -1,0 +1,333 @@
+backend:
+  name: git-gateway
+  branch: main
+
+locale: ar
+
+media_folder: icons
+public_folder: /icons
+
+collections:
+
+  - name: site_config
+    label: "⚙️ إعدادات الموقع"
+    files:
+      - name: config
+        label: "الإعدادات العامة"
+        file: data/site-config.json
+        format: json
+        fields:
+          - { label: "تاريخ الامتحان الجهوي", name: examDate, widget: datetime, format: "YYYY-MM-DDTHH:mm:ss", hint: "تاريخ ووقت الامتحان الجهوي" }
+          - { label: "السنة الدراسية", name: schoolYear, widget: string }
+          - { label: "اسم الأستاذ", name: teacherName, widget: string }
+          - { label: "اسم المؤسسة", name: institutionName, widget: string }
+          - { label: "ملاحظات الامتحان", name: examNotes, widget: text }
+
+  - name: quizzes
+    label: "❓ أسئلة الاختبارات"
+    files:
+      - name: nazisme
+        label: "النازية"
+        file: data/quizzes.json
+        format: json
+        fields:
+          - label: "أسئلة درس النازية"
+            name: nazisme
+            widget: list
+            fields:
+              - { label: "السؤال", name: question, widget: string }
+              - label: "الخيارات (4 خيارات)"
+                name: options
+                widget: list
+                field: { label: "خيار", name: option, widget: string }
+              - { label: "رقم الإجابة الصحيحة (0-3)", name: answer, widget: number, value_type: int, min: 0, max: 3 }
+              - { label: "التفسير", name: explanation, widget: string }
+
+      - name: ww2
+        label: "الحرب العالمية الثانية"
+        file: data/quizzes.json
+        format: json
+        fields:
+          - label: "أسئلة درس الحرب العالمية الثانية"
+            name: ww2
+            widget: list
+            fields:
+              - { label: "السؤال", name: question, widget: string }
+              - label: "الخيارات"
+                name: options
+                widget: list
+                field: { label: "خيار", name: option, widget: string }
+              - { label: "رقم الإجابة الصحيحة (0-3)", name: answer, widget: number, value_type: int, min: 0, max: 3 }
+              - { label: "التفسير", name: explanation, widget: string }
+
+      - name: palestine
+        label: "القضية الفلسطينية"
+        file: data/quizzes.json
+        format: json
+        fields:
+          - label: "أسئلة درس القضية الفلسطينية"
+            name: palestine
+            widget: list
+            fields:
+              - { label: "السؤال", name: question, widget: string }
+              - label: "الخيارات"
+                name: options
+                widget: list
+                field: { label: "خيار", name: option, widget: string }
+              - { label: "رقم الإجابة الصحيحة (0-3)", name: answer, widget: number, value_type: int, min: 0, max: 3 }
+              - { label: "التفسير", name: explanation, widget: string }
+
+      - name: independence
+        label: "الاستقلال المغربي"
+        file: data/quizzes.json
+        format: json
+        fields:
+          - label: "أسئلة درس الاستقلال المغربي"
+            name: independence
+            widget: list
+            fields:
+              - { label: "السؤال", name: question, widget: string }
+              - label: "الخيارات"
+                name: options
+                widget: list
+                field: { label: "خيار", name: option, widget: string }
+              - { label: "رقم الإجابة الصحيحة (0-3)", name: answer, widget: number, value_type: int, min: 0, max: 3 }
+              - { label: "التفسير", name: explanation, widget: string }
+
+      - name: moroccan-state
+        label: "الدولة المغربية الحديثة"
+        file: data/quizzes.json
+        format: json
+        fields:
+          - label: "أسئلة درس الدولة المغربية"
+            name: moroccan-state
+            widget: list
+            fields:
+              - { label: "السؤال", name: question, widget: string }
+              - label: "الخيارات"
+                name: options
+                widget: list
+                field: { label: "خيار", name: option, widget: string }
+              - { label: "رقم الإجابة الصحيحة (0-3)", name: answer, widget: number, value_type: int, min: 0, max: 3 }
+              - { label: "التفسير", name: explanation, widget: string }
+
+      - name: resistance
+        label: "المقاومة المغربية"
+        file: data/quizzes.json
+        format: json
+        fields:
+          - label: "أسئلة درس المقاومة"
+            name: resistance
+            widget: list
+            fields:
+              - { label: "السؤال", name: question, widget: string }
+              - label: "الخيارات"
+                name: options
+                widget: list
+                field: { label: "خيار", name: option, widget: string }
+              - { label: "رقم الإجابة الصحيحة (0-3)", name: answer, widget: number, value_type: int, min: 0, max: 3 }
+              - { label: "التفسير", name: explanation, widget: string }
+
+      - name: usa
+        label: "الولايات المتحدة الأمريكية"
+        file: data/quizzes.json
+        format: json
+        fields:
+          - label: "أسئلة درس أمريكا"
+            name: usa
+            widget: list
+            fields:
+              - { label: "السؤال", name: question, widget: string }
+              - label: "الخيارات"
+                name: options
+                widget: list
+                field: { label: "خيار", name: option, widget: string }
+              - { label: "رقم الإجابة الصحيحة (0-3)", name: answer, widget: number, value_type: int, min: 0, max: 3 }
+              - { label: "التفسير", name: explanation, widget: string }
+
+      - name: japan
+        label: "اليابان"
+        file: data/quizzes.json
+        format: json
+        fields:
+          - label: "أسئلة درس اليابان"
+            name: japan
+            widget: list
+            fields:
+              - { label: "السؤال", name: question, widget: string }
+              - label: "الخيارات"
+                name: options
+                widget: list
+                field: { label: "خيار", name: option, widget: string }
+              - { label: "رقم الإجابة الصحيحة (0-3)", name: answer, widget: number, value_type: int, min: 0, max: 3 }
+              - { label: "التفسير", name: explanation, widget: string }
+
+      - name: russia
+        label: "روسيا"
+        file: data/quizzes.json
+        format: json
+        fields:
+          - label: "أسئلة درس روسيا"
+            name: russia
+            widget: list
+            fields:
+              - { label: "السؤال", name: question, widget: string }
+              - label: "الخيارات"
+                name: options
+                widget: list
+                field: { label: "خيار", name: option, widget: string }
+              - { label: "رقم الإجابة الصحيحة (0-3)", name: answer, widget: number, value_type: int, min: 0, max: 3 }
+              - { label: "التفسير", name: explanation, widget: string }
+
+      - name: egypt
+        label: "مصر"
+        file: data/quizzes.json
+        format: json
+        fields:
+          - label: "أسئلة درس مصر"
+            name: egypt
+            widget: list
+            fields:
+              - { label: "السؤال", name: question, widget: string }
+              - label: "الخيارات"
+                name: options
+                widget: list
+                field: { label: "خيار", name: option, widget: string }
+              - { label: "رقم الإجابة الصحيحة (0-3)", name: answer, widget: number, value_type: int, min: 0, max: 3 }
+              - { label: "التفسير", name: explanation, widget: string }
+
+      - name: nigeria
+        label: "نيجيريا"
+        file: data/quizzes.json
+        format: json
+        fields:
+          - label: "أسئلة درس نيجيريا"
+            name: nigeria
+            widget: list
+            fields:
+              - { label: "السؤال", name: question, widget: string }
+              - label: "الخيارات"
+                name: options
+                widget: list
+                field: { label: "خيار", name: option, widget: string }
+              - { label: "رقم الإجابة الصحيحة (0-3)", name: answer, widget: number, value_type: int, min: 0, max: 3 }
+              - { label: "التفسير", name: explanation, widget: string }
+
+      - name: economic-phenomenon
+        label: "الظاهرة الاقتصادية"
+        file: data/quizzes.json
+        format: json
+        fields:
+          - label: "أسئلة درس الظاهرة الاقتصادية"
+            name: economic-phenomenon
+            widget: list
+            fields:
+              - { label: "السؤال", name: question, widget: string }
+              - label: "الخيارات"
+                name: options
+                widget: list
+                field: { label: "خيار", name: option, widget: string }
+              - { label: "رقم الإجابة الصحيحة (0-3)", name: answer, widget: number, value_type: int, min: 0, max: 3 }
+              - { label: "التفسير", name: explanation, widget: string }
+
+      - name: heritage
+        label: "التراث الحضاري"
+        file: data/quizzes.json
+        format: json
+        fields:
+          - label: "أسئلة درس التراث"
+            name: heritage
+            widget: list
+            fields:
+              - { label: "السؤال", name: question, widget: string }
+              - label: "الخيارات"
+                name: options
+                widget: list
+                field: { label: "خيار", name: option, widget: string }
+              - { label: "رقم الإجابة الصحيحة (0-3)", name: answer, widget: number, value_type: int, min: 0, max: 3 }
+              - { label: "التفسير", name: explanation, widget: string }
+
+      - name: natural-resources
+        label: "الموارد الطبيعية"
+        file: data/quizzes.json
+        format: json
+        fields:
+          - label: "أسئلة درس الموارد الطبيعية"
+            name: natural-resources
+            widget: list
+            fields:
+              - { label: "السؤال", name: question, widget: string }
+              - label: "الخيارات"
+                name: options
+                widget: list
+                field: { label: "خيار", name: option, widget: string }
+              - { label: "رقم الإجابة الصحيحة (0-3)", name: answer, widget: number, value_type: int, min: 0, max: 3 }
+              - { label: "التفسير", name: explanation, widget: string }
+
+      - name: world-sharing
+        label: "تقاسم العالم"
+        file: data/quizzes.json
+        format: json
+        fields:
+          - label: "أسئلة درس تقاسم العالم"
+            name: world-sharing
+            widget: list
+            fields:
+              - { label: "السؤال", name: question, widget: string }
+              - label: "الخيارات"
+                name: options
+                widget: list
+                field: { label: "خيار", name: option, widget: string }
+              - { label: "رقم الإجابة الصحيحة (0-3)", name: answer, widget: number, value_type: int, min: 0, max: 3 }
+              - { label: "التفسير", name: explanation, widget: string }
+
+      - name: religions-dialogue
+        label: "حوار الأديان"
+        file: data/quizzes.json
+        format: json
+        fields:
+          - label: "أسئلة درس حوار الأديان"
+            name: religions-dialogue
+            widget: list
+            fields:
+              - { label: "السؤال", name: question, widget: string }
+              - label: "الخيارات"
+                name: options
+                widget: list
+                field: { label: "خيار", name: option, widget: string }
+              - { label: "رقم الإجابة الصحيحة (0-3)", name: answer, widget: number, value_type: int, min: 0, max: 3 }
+              - { label: "التفسير", name: explanation, widget: string }
+
+      - name: world-peace
+        label: "السلم العالمي"
+        file: data/quizzes.json
+        format: json
+        fields:
+          - label: "أسئلة درس السلم العالمي"
+            name: world-peace
+            widget: list
+            fields:
+              - { label: "السؤال", name: question, widget: string }
+              - label: "الخيارات"
+                name: options
+                widget: list
+                field: { label: "خيار", name: option, widget: string }
+              - { label: "رقم الإجابة الصحيحة (0-3)", name: answer, widget: number, value_type: int, min: 0, max: 3 }
+              - { label: "التفسير", name: explanation, widget: string }
+
+      - name: media-programs
+        label: "البرامج الإعلامية"
+        file: data/quizzes.json
+        format: json
+        fields:
+          - label: "أسئلة درس البرامج الإعلامية"
+            name: media-programs
+            widget: list
+            fields:
+              - { label: "السؤال", name: question, widget: string }
+              - label: "الخيارات"
+                name: options
+                widget: list
+                field: { label: "خيار", name: option, widget: string }
+              - { label: "رقم الإجابة الصحيحة (0-3)", name: answer, widget: number, value_type: int, min: 0, max: 3 }
+              - { label: "التفسير", name: explanation, widget: string }

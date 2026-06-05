@@ -1,6 +1,13 @@
 [build]
   publish = "."
 
+[dev]
+  publish = "."
+
+# Netlify Identity + Git Gateway for CMS
+[identity]
+  enabled = true
+
 [[headers]]
   for = "/*"
   [headers.values]
