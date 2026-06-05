@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="قائمة دروس الاجتماعيات للثالثة إعدادي - التاريخ والجغرافيا والمواطنة">
+  <title>الدروس | الاجتماعيات للجميع</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-brand">
+      <div class="brand-icon">🎓</div>
+      <div class="brand-text"><span class="brand-title">الاجتماعيات للجميع</span><span class="brand-sub">الأستاذ أحمد بوعمود</span></div>
+    </a>
+    <ul class="navbar-nav">
+      <li><a href="index.html">🏠 الرئيسية</a></li>
+      <li><a href="lessons.html" class="active">📚 الدروس</a></li>
+      <li><a href="methodology.html">📝 المنهجية</a></li>
+      <li><a href="infographics.html">🎨 الإنفوغرافيا</a></li>
+      <li><a href="videos.html">🎬 فيديوهات</a></li>
+      <li><a href="exams.html">📋 الامتحانات</a></li>
+      <li><a href="resources.html">🔗 الموارد</a></li>
+      <li><a href="exam-night.html">🌙 ليلة الامتحان</a></li>
+    </ul>
+    <div class="navbar-actions">
+      <button class="hamburger">☰</button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">🏠 الرئيسية</a>
+  <a href="lessons.html">📚 الدروس</a>
+  <a href="methodology.html">📝 المنهجية</a>
+  <a href="exams.html">📋 الامتحانات</a>
+  <a href="exam-night.html">🌙 ليلة الامتحان</a>
+  <a href="glossary.html">📖 القاموس</a>
+  <a href="progress.html">📊 التقدم</a>
+</div>
+
+<main>
+<!-- رأس الصفحة -->
+<div style="background: linear-gradient(135deg, var(--primary-dark), var(--primary)); padding: 3rem 0; color: white;">
+  <div class="container">
+    <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+      <div>
+        <h1 style="font-size:2rem; font-weight:900; margin-bottom:0.5rem;">📚 قائمة الدروس</h1>
+        <p style="color:rgba(255,255,255,0.8);">18 درساً في التاريخ والجغرافيا والتربية على المواطنة — الثالثة إعدادي</p>
+      </div>
+      <div style="background:rgba(255,255,255,0.1); border-radius:12px; padding:1rem 1.5rem; border:1px solid rgba(255,255,255,0.15); text-align:center;">
+        <div style="font-size:2rem; font-weight:900; color:var(--gold-light);"><span id="progressCount">0</span>/18</div>
+        <div style="font-size:0.8rem; color:rgba(255,255,255,0.7);">دروس تمت مراجعتها</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- شريط البحث والفلترة -->
+<div style="background:white; border-bottom:1px solid #F0F0F0; padding:1rem 0; position:sticky; top:70px; z-index:100; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+  <div class="container">
+    <div style="display:flex; align-items:center; gap:1rem; flex-wrap:wrap;">
+      <div class="search-container" style="flex:1; min-width:200px;">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" class="search-input" placeholder="ابحث في الدروس..." aria-label="بحث">
+      </div>
+      <div class="filter-tabs">
+        <button class="filter-tab active-all" data-domain="">الكل (18)</button>
+        <button class="filter-tab" data-domain="history">📜 التاريخ (6)</button>
+        <button class="filter-tab" data-domain="geography">🗺️ الجغرافيا (6)</button>
+        <button class="filter-tab" data-domain="citizenship">⚖️ المواطنة (6)</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" style="padding: 2.5rem 1rem;">
+
+  <!-- قسم التاريخ -->
+  <section id="history" style="margin-bottom:3rem;">
+    <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1.5rem; padding:1rem 1.5rem; background:var(--history-bg); border-radius:var(--radius-lg); border-right:4px solid var(--history);">
+      <span style="font-size:2.5rem;">📜</span>
+      <div>
+        <h2 style="font-size:1.4rem; font-weight:800; color:var(--history);">مجال التاريخ</h2>
+        <p style="color:var(--text-muted); font-size:0.9rem;">6 دروس حول الأحداث التاريخية الكبرى</p>
+      </div>
+    </div>
+    <div class="cards-grid">
+      <a href="lessons/history/nazisme.html" class="lesson-card history" data-lesson-id="nazisme">
+        <div class="lesson-card-domain"></div>
+        <div class="lesson-card-body">
+          <span class="lesson-card-number">1</span>
+          <h3 class="lesson-card-title">ظاهرة الأنظمة الديكتاتورية: النازية نموذجاً</h3>
+          <p class="lesson-card-desc">دراسة أسباب ظهور النازية في ألمانيا، خصائصها، وانعكاساتها على العالم.</p>
+        </div>
+        <div class="lesson-card-footer">
+          <span class="lesson-card-badge">📜 التاريخ</span>
+          <span class="lesson-reviewed-badge">✅ تمت المراجعة</span>
+        </div>
+      </a>
+      <a href="lessons/history/ww2.html" class="lesson-card history" data-lesson-id="ww2">
+        <div class="lesson-card-domain"></div>
+        <div class="lesson-card-body">
+          <span class="lesson-card-number">2</span>
+          <h3 class="lesson-card-title">الحرب العالمية الثانية: الأسباب والنتائج</h3>
+          <p class="lesson-card-desc">مراحل الحرب العالمية، أبرز المعارك، والنتائج السياسية والإنسانية.</p>
+        </div>
+        <div class="lesson-card-footer">
+          <span class="lesson-card-badge">📜 التاريخ</span>
+          <span class="lesson-reviewed-badge">✅ تمت المراجعة</span>
+        </div>
+      </a>
+      <a href="lessons/history/palestine.html" class="lesson-card history" data-lesson-id="palestine">
+        <div class="lesson-card-domain"></div>
+        <div class="lesson-card-body">
+          <span class="lesson-card-number">3</span>
+          <h3 class="lesson-card-title">القضية الفلسطينية والصراع العربي الإسرائيلي</h3>
+          <p class="lesson-card-desc">جذور القضية الفلسطينية من وعد بلفور إلى محاولات التسوية الراهنة.</p>
+        </div>
+        <div class="lesson-card-footer">
+          <span class="lesson-card-badge">📜 التاريخ</span>
+          <span class="lesson-reviewed-badge">✅ تمت المراجعة</span>
+        </div>
+      </a>
+      <a href="lessons/history/independence.html" class="lesson-card history" data-lesson-id="independence">
+        <div class="lesson-card-domain"></div>
+        <div class="lesson-card-body">
+          <span class="lesson-card-number">4</span>
+          <h3 class="lesson-card-title">المغرب: الكفاح من أجل الاستقلال وإتمام الوحدة الترابية</h3>
+          <p class="lesson-card-desc">النضال الوطني، نفي محمد الخامس، الاستقلال 1956، المسيرة الخضراء.</p>
+        </div>
+        <div class="lesson-card-footer">
+          <span class="lesson-card-badge">📜 التاريخ</span>
+          <span class="lesson-reviewed-badge">✅ تمت المراجعة</span>
+        </div>
+      </a>
+      <a href="lessons/history/moroccan-state.html" class="lesson-card history" data-lesson-id="moroccan-state">
+        <div class="lesson-card-domain"></div>
+        <div class="lesson-card-body">
+          <span class="lesson-card-number">5</span>
+          <h3 class="lesson-card-title">المراحل الكبرى لبناء الدولة المغربية الحديثة</h3>
+          <p class="lesson-card-desc">من الاستقلال إلى اليوم: البناء المؤسسي والسياسي والاقتصادي.</p>
+        </div>
+        <div class="lesson-card-footer">
+          <span class="lesson-card-badge">📜 التاريخ</span>
+          <span class="lesson-reviewed-badge">✅ تمت المراجعة</span>
+        </div>
+      </a>
+      <a href="lessons/history/resistance.html" class="lesson-card history" data-lesson-id="resistance">
+        <div class="lesson-card-domain"></div>
+        <div class="lesson-card-body">
+          <span class="lesson-card-number">6</span>
+          <h3 class="lesson-card-title">ملف حول المقاومة المغربية</h3>
+          <p class="lesson-card-desc">أشكال المقاومة المسلحة والسياسية وأبرز رموزها وشهدائها.</p>
+        </div>
+        <div class="lesson-card-footer">
+          <span class="lesson-card-badge">📜 التاريخ</span>
+          <span class="lesson-reviewed-badge">✅ تمت المراجعة</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- قسم الجغرافيا -->
+  <section id="geography" style="margin-bottom:3rem;">
+    <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1.5rem; padding:1rem 1.5rem; background:var(--geography-bg); border-radius:var(--radius-lg); border-right:4px solid var(--geography);">
+      <span style="font-size:2.5rem;">🗺️</span>
+      <div>
+        <h2 style="font-size:1.4rem; font-weight:800; color:var(--geography);">مجال الجغرافيا</h2>
+        <p style="color:var(--text-muted); font-size:0.9rem;">6 دروس حول القوى العالمية والنماذج التنموية</p>
+      </div>
+    </div>
+    <div class="cards-grid">
+      <a href="lessons/geography/usa.html" class="lesson-card geography" data-lesson-id="usa">
+        <div class="lesson-card-domain"></div>
+        <div class="lesson-card-body">
+          <span class="lesson-card-number">1</span>
+          <h3 class="lesson-card-title">الولايات المتحدة الأمريكية: قوة عالمية</h3>
+          <p class="lesson-card-desc">مقومات القوة الأمريكية وتحدياتها في عالم متعدد الأقطاب.</p>
+        </div>
+        <div class="lesson-card-footer">
+          <span class="lesson-card-badge">🗺️ الجغرافيا</span>
+          <span class="lesson-reviewed-badge">✅ تمت المراجعة</span>
+        </div>
+      </a>
+      <a href="lessons/geography/japan.html" class="lesson-card geography" data-lesson-id="japan">
+        <div class="lesson-card-domain"></div>
+        <div class="lesson-card-body">
+          <span class="lesson-card-number">2</span>
+          <h3 class="lesson-card-title">اليابان: قوة تكنولوجية</h3>
+          <p class="lesson-card-desc">المعجزة الاقتصادية اليابانية وأسرار التقدم التكنولوجي والتحديات.</p>
+        </div>
+        <div class="lesson-card-footer">
+          <span class="lesson-card-badge">🗺️ الجغرافيا</span>
+          <span class="lesson-reviewed-badge">✅ تمت المراجعة</span>
+        </div>
+      </a>
+      <a href="lessons/geography/russia.html" class="lesson-card geography" data-lesson-id="russia">
+        <div class="lesson-card-domain"></div>
+        <div class="lesson-card-body">
+          <span class="lesson-card-number">3</span>
+          <h3 class="lesson-card-title">روسيا: رهانات التحول</h3>
+          <p class="lesson-card-desc">من الاتحاد السوفيتي إلى روسيا الاتحادية: الثروات والتحولات والتحديات.</p>
+        </div>
+        <div class="lesson-card-footer">
+          <span class="lesson-card-badge">🗺️ الجغرافيا</span>
+          <span class="lesson-reviewed-badge">✅ تمت المراجعة</span>
+        </div>
+      </a>
+      <a href="lessons/geography/egypt.html" class="lesson-card geography" data-lesson-id="egypt">
+        <div class="lesson-card-domain"></div>
+        <div class="lesson-card-body">
+          <span class="lesson-card-number">4</span>
+          <h3 class="lesson-card-title">مصر: نموذج تنموي عربي</h3>
+          <p class="lesson-card-desc">الموارد الطبيعية والبشرية والتحديات التنموية في مصر.</p>
+        </div>
+        <div class="lesson-card-footer">
+          <span class="lesson-card-badge">🗺️ الجغرافيا</span>
+          <span class="lesson-reviewed-badge">✅ تمت المراجعة</span>
+        </div>
+      </a>
+      <a href="lessons/geography/nigeria.html" class="lesson-card geography" data-lesson-id="nigeria">
+        <div class="lesson-card-domain"></div>
+        <div class="lesson-card-body">
+          <span class="lesson-card-number">5</span>
+          <h3 class="lesson-card-title">نيجيريا: بين الغنى الطبيعي والضعف التنموي</h3>
+          <p class="lesson-card-desc">دولة غنية بالبترول لكن تعاني الفقر والتفاوت والصراعات.</p>
+        </div>
+        <div class="lesson-card-footer">
+          <span class="lesson-card-badge">🗺️ الجغرافيا</span>
+          <span class="lesson-reviewed-badge">✅ تمت المراجعة</span>
+        </div>
+      </a>
+      <a href="lessons/geography/economic-phenomenon.html" class="lesson-card geography" data-lesson-id="economic-phenomenon">
+        <div class="lesson-card-domain"></div>
+        <div class="lesson-card-body">
+          <span class="lesson-card-number">6</span>
+          <h3 class="lesson-card-title">التدرب على معالجة ظاهرة اقتصادية بالنهج الجغرافي</h3>
+          <p class="lesson-card-desc">منهجية تحليل الظواهر الاقتصادية: الخريطة والجدول والمبيان.</p>
+        </div>
+        <div class="lesson-card-footer">
+          <span class="lesson-card-badge">🗺️ الجغرافيا</span>
+          <span class="lesson-reviewed-badge">✅ تمت المراجعة</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- قسم المواطنة -->
+  <section id="citizenship" style="margin-bottom:3rem;">
+    <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1.5rem; padding:1rem 1.5rem; background:var(--citizenship-bg); border-radius:var(--radius-lg); border-right:4px solid var(--citizenship);">
+      <span style="font-size:2.5rem;">⚖️</span>
+      <div>
+        <h2 style="font-size:1.4rem; font-weight:800; color:var(--citizenship);">مجال التربية على المواطنة</h2>
+        <p style="color:var(--text-muted); font-size:0.9rem;">6 دروس حول القيم المدنية والمواطنة الفاعلة</p>
+      </div>
+    </div>
+    <div class="cards-grid">
+      <a href="lessons/citizenship/heritage.html" class="lesson-card citizenship" data-lesson-id="heritage">
+        <div class="lesson-card-domain"></div>
+        <div class="lesson-card-body">
+          <span class="lesson-card-number">1</span>
+          <h3 class="lesson-card-title">الحفاظ على التراث وتطويره</h3>
+          <p class="lesson-card-desc">التراث المادي واللامادي، دور اليونسكو، والهوية الثقافية المغربية.</p>
+        </div>
+        <div class="lesson-card-footer">
+          <span class="lesson-card-badge">⚖️ المواطنة</span>
+          <span class="lesson-reviewed-badge">✅ تمت المراجعة</span>
+        </div>
+      </a>
+      <a href="lessons/citizenship/natural-resources.html" class="lesson-card citizenship" data-lesson-id="natural-resources">
+        <div class="lesson-card-domain"></div>
+        <div class="lesson-card-body">
+          <span class="lesson-card-number">2</span>
+          <h3 class="lesson-card-title">الحفاظ على الموارد الطبيعية</h3>
+          <p class="lesson-card-desc">التهديدات البيئية وآليات الحفاظ على الموارد للأجيال القادمة.</p>
+        </div>
+        <div class="lesson-card-footer">
+          <span class="lesson-card-badge">⚖️ المواطنة</span>
+          <span class="lesson-reviewed-badge">✅ تمت المراجعة</span>
+        </div>
+      </a>
+      <a href="lessons/citizenship/world-sharing.html" class="lesson-card citizenship" data-lesson-id="world-sharing">
+        <div class="lesson-card-domain"></div>
+        <div class="lesson-card-body">
+          <span class="lesson-card-number">3</span>
+          <h3 class="lesson-card-title">نحن والعالم: نتقاسم الكرة الأرضية</h3>
+          <p class="lesson-card-desc">التضامن الدولي والتفاوتات الشمال-الجنوب ودور المنظمات الدولية.</p>
+        </div>
+        <div class="lesson-card-footer">
+          <span class="lesson-card-badge">⚖️ المواطنة</span>
+          <span class="lesson-reviewed-badge">✅ تمت المراجعة</span>
+        </div>
+      </a>
+      <a href="lessons/citizenship/religions-dialogue.html" class="lesson-card citizenship" data-lesson-id="religions-dialogue">
+        <div class="lesson-card-domain"></div>
+        <div class="lesson-card-body">
+          <span class="lesson-card-number">4</span>
+          <h3 class="lesson-card-title">المغرب وحوار الأديان</h3>
+          <p class="lesson-card-desc">الإسلام الوسطي وتاريخ التعايش الديني ودور المغرب في حوار الحضارات.</p>
+        </div>
+        <div class="lesson-card-footer">
+          <span class="lesson-card-badge">⚖️ المواطنة</span>
+          <span class="lesson-reviewed-badge">✅ تمت المراجعة</span>
+        </div>
+      </a>
+      <a href="lessons/citizenship/world-peace.html" class="lesson-card citizenship" data-lesson-id="world-peace">
+        <div class="lesson-card-domain"></div>
+        <div class="lesson-card-body">
+          <span class="lesson-card-number">5</span>
+          <h3 class="lesson-card-title">المغرب والسلم العالمي</h3>
+          <p class="lesson-card-desc">مساهمة المغرب في قوات حفظ السلام والدبلوماسية وحل النزاعات.</p>
+        </div>
+        <div class="lesson-card-footer">
+          <span class="lesson-card-badge">⚖️ المواطنة</span>
+          <span class="lesson-reviewed-badge">✅ تمت المراجعة</span>
+        </div>
+      </a>
+      <a href="lessons/citizenship/media-programs.html" class="lesson-card citizenship" data-lesson-id="media-programs">
+        <div class="lesson-card-domain"></div>
+        <div class="lesson-card-body">
+          <span class="lesson-card-number">6</span>
+          <h3 class="lesson-card-title">اقتراح برامج إعلامية للنهوض بقيم المواطنة</h3>
+          <p class="lesson-card-desc">دور الإعلام في ترسيخ قيم المواطنة ومعايير البرنامج الهادف.</p>
+        </div>
+        <div class="lesson-card-footer">
+          <span class="lesson-card-badge">⚖️ المواطنة</span>
+          <span class="lesson-reviewed-badge">✅ تمت المراجعة</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- لوحة التقدم -->
+  <div class="progress-dashboard">
+    <h3 style="font-size:1.25rem; font-weight:800; color:var(--text-dark); margin-bottom:0.5rem;">📊 تقدمك في المراجعة</h3>
+    <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:1.5rem;">تتبع الدروس التي راجعتها لمعرفة مستواك</p>
+    <div class="progress-info">
+      <span class="progress-text">إجمالي التقدم</span>
+      <span class="progress-percent" id="progressPercent">0%</span>
+    </div>
+    <div class="progress-bar" style="height:12px;">
+      <div class="progress-fill" id="progressBar" style="width:0%;"></div>
+    </div>
+    <div class="progress-domains">
+      <div class="domain-progress history-domain">
+        <div class="domain-icon">📜</div>
+        <div class="domain-name">التاريخ</div>
+        <div class="domain-count" id="historyCount">0/6</div>
+      </div>
+      <div class="domain-progress geography-domain">
+        <div class="domain-icon">🗺️</div>
+        <div class="domain-name">الجغرافيا</div>
+        <div class="domain-count" id="geographyCount">0/6</div>
+      </div>
+      <div class="domain-progress citizenship-domain">
+        <div class="domain-icon">⚖️</div>
+        <div class="domain-name">المواطنة</div>
+        <div class="domain-count" id="citizenshipCount">0/6</div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:1.5rem;">
+      <a href="progress.html" class="btn btn-green">📊 تفاصيل التقدم الكامل</a>
+    </div>
+  </div>
+
+</div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand-name">🎓 الاجتماعيات للجميع</div>
+        <p class="brand-desc">منصة تعليمية شاملة — الأستاذ أحمد بوعمود — مؤسسة الحنان</p>
+      </div>
+      <div>
+        <h4 class="footer-heading">التاريخ</h4>
+        <ul class="footer-links">
+          <li><a href="lessons/history/nazisme.html">النازية</a></li>
+          <li><a href="lessons/history/ww2.html">الحرب العالمية الثانية</a></li>
+          <li><a href="lessons/history/palestine.html">القضية الفلسطينية</a></li>
+          <li><a href="lessons/history/independence.html">الاستقلال المغربي</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">أدوات</h4>
+        <ul class="footer-links">
+          <li><a href="methodology.html">📝 المنهجية</a></li>
+          <li><a href="exams.html">📋 الامتحانات</a></li>
+          <li><a href="exam-night.html">🌙 ليلة الامتحان</a></li>
+          <li><a href="glossary.html">📖 القاموس</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>منصة الاجتماعيات للجميع</span>
+      <span class="footer-signature">إعداد: الأستاذ أحمد بوعمود — مؤسسة الحنان</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+<script>
+  function updateLessonsProgress() {
+    const historyIds = ['nazisme','ww2','palestine','independence','moroccan-state','resistance'];
+    const geoIds = ['usa','japan','russia','egypt','nigeria','economic-phenomenon'];
+    const civIds = ['heritage','natural-resources','world-sharing','religions-dialogue','world-peace','media-programs'];
+    const reviewed = Progress.getReviewedIds();
+    const h = historyIds.filter(id => reviewed.includes(id)).length;
+    const g = geoIds.filter(id => reviewed.includes(id)).length;
+    const c = civIds.filter(id => reviewed.includes(id)).length;
+    const total = h + g + c;
+    const pct = Math.round((total / 18) * 100);
+    document.getElementById('historyCount').textContent = h + '/6';
+    document.getElementById('geographyCount').textContent = g + '/6';
+    document.getElementById('citizenshipCount').textContent = c + '/6';
+    document.getElementById('progressCount').textContent = total;
+    document.getElementById('progressBar').style.width = pct + '%';
+    document.getElementById('progressPercent').textContent = pct + '%';
+  }
+  updateLessonsProgress();
+  updateCardReviewStatus();
+</script>
+</body>
+</html>

@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="منصة الاجتماعيات للجميع - مراجعة شاملة للجهوي في الاجتماعيات للثالثة إعدادي - الأستاذ أحمد بوعمود">
+  <meta name="keywords" content="الاجتماعيات, الثالثة إعدادي, الجهوي, مراجعة, التاريخ, الجغرافيا, المواطنة, المغرب">
+  <meta name="author" content="الأستاذ أحمد بوعمود">
+  <meta property="og:title" content="الاجتماعيات للجميع - مراجعة الجهوي">
+  <meta property="og:description" content="منصة تعليمية شاملة لمراجعة مادة الاجتماعيات للثالثة إعدادي">
+  <title>الاجتماعيات للجميع | مراجعة الجهوي - الثالثة إعدادي</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+</head>
+<body>
+
+<!-- ===== شريط التنقل ===== -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-brand">
+      <div class="brand-icon">🎓</div>
+      <div class="brand-text">
+        <span class="brand-title">الاجتماعيات للجميع</span>
+        <span class="brand-sub">الأستاذ أحمد بوعمود</span>
+      </div>
+    </a>
+    <ul class="navbar-nav">
+      <li><a href="index.html" class="active">🏠 الرئيسية</a></li>
+      <li><a href="lessons.html">📚 الدروس</a></li>
+      <li><a href="methodology.html">📝 المنهجية</a></li>
+      <li><a href="infographics.html">🎨 الإنفوغرافيا</a></li>
+      <li><a href="videos.html">🎬 فيديوهات</a></li>
+      <li><a href="exams.html">📋 الامتحانات</a></li>
+      <li><a href="resources.html">🔗 الموارد</a></li>
+      <li><a href="exam-night.html">🌙 ليلة الامتحان</a></li>
+    </ul>
+    <div class="navbar-actions">
+      <a href="exam-night.html" class="btn-nav">🌙 ليلة الامتحان</a>
+      <button class="hamburger" aria-label="القائمة">☰</button>
+    </div>
+  </div>
+</nav>
+
+<!-- القائمة المتنقلة -->
+<div class="mobile-menu">
+  <a href="index.html">🏠 الرئيسية</a>
+  <a href="lessons.html">📚 الدروس</a>
+  <a href="methodology.html">📝 المنهجية</a>
+  <a href="infographics.html">🎨 الإنفوغرافيا</a>
+  <a href="videos.html">🎬 فيديوهات</a>
+  <a href="exams.html">📋 الامتحانات الجهوية</a>
+  <a href="resources.html">🔗 الموارد الخارجية</a>
+  <a href="teacher-space.html">👨‍🏫 فضاء الأستاذ</a>
+  <a href="exam-night.html">🌙 ليلة الامتحان</a>
+  <a href="glossary.html">📖 قاموس المصطلحات</a>
+  <a href="progress.html">📊 تتبع التقدم</a>
+</div>
+
+<main>
+
+<!-- ===== القسم البطل ===== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge">
+          <span>🇲🇦</span>
+          <span>الثالثة إعدادي — الدورة الثانية 2025/2026</span>
+        </div>
+        <h1>
+          استعد للامتحان الجهوي<br>
+          في <span class="highlight">الاجتماعيات</span> بثقة
+        </h1>
+        <p>
+          منصة تعليمية شاملة تضم 18 درساً في التاريخ والجغرافيا والتربية على المواطنة،
+          مع اختبارات تفاعلية، إنفوغرافيا، وأدوات مراجعة احترافية.
+        </p>
+        <div class="hero-actions">
+          <a href="lessons.html" class="btn btn-primary btn-lg">📚 ابدأ المراجعة الآن</a>
+          <a href="exam-night.html" class="btn btn-secondary btn-lg">🌙 ليلة الامتحان</a>
+        </div>
+        <!-- لوحة التقدم المصغرة -->
+        <div class="hero-progress-mini" style="margin-top: 2rem; background: rgba(255,255,255,0.1); border-radius: 12px; padding: 1rem 1.5rem; border: 1px solid rgba(255,255,255,0.15);">
+          <div class="progress-info" style="color:white;">
+            <span style="font-size:0.9rem;">تقدمك في المراجعة</span>
+            <span id="progressPercent" style="font-weight:700; color:var(--gold-light);">0%</span>
+          </div>
+          <div class="progress-bar" style="margin-top:0.5rem;">
+            <div class="progress-fill" id="progressBar" style="width:0%;"></div>
+          </div>
+          <p style="font-size:0.8rem; color:rgba(255,255,255,0.6); margin-top:0.5rem;">
+            <span id="progressCount">0</span> من 18 درساً تمت مراجعتها
+          </p>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat-card">
+          <div class="stat-number">18</div>
+          <div class="stat-label">درساً شاملاً</div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="stat-number">3</div>
+          <div class="stat-label">مجالات</div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="stat-number">90+</div>
+          <div class="stat-label">سؤال تفاعلي</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== العد التنازلي ===== -->
+<section class="countdown-section">
+  <div class="container">
+    <h2 style="text-align:center; color:rgba(255,255,255,0.85); font-size:1.1rem; margin-bottom:1.5rem; font-weight:500;">
+      ⏳ الوقت المتبقي على الامتحان الجهوي التقريبي
+    </h2>
+    <div class="countdown-grid" id="countdown">
+      <div class="countdown-item">
+        <span class="countdown-number cd-days">--</span>
+        <span class="countdown-label">أياماً</span>
+      </div>
+      <div class="countdown-separator">:</div>
+      <div class="countdown-item">
+        <span class="countdown-number cd-hours">--</span>
+        <span class="countdown-label">ساعة</span>
+      </div>
+      <div class="countdown-separator">:</div>
+      <div class="countdown-item">
+        <span class="countdown-number cd-minutes">--</span>
+        <span class="countdown-label">دقيقة</span>
+      </div>
+      <div class="countdown-separator">:</div>
+      <div class="countdown-item">
+        <span class="countdown-number cd-seconds">--</span>
+        <span class="countdown-label">ثانية</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== المجالات الثلاثة ===== -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">المجالات الدراسية</h2>
+        <p class="section-subtitle">18 درساً في ثلاثة مجالات أساسية</p>
+      </div>
+      <a href="lessons.html" class="btn btn-outline btn-sm">عرض كل الدروس ←</a>
+    </div>
+
+    <div class="cards-grid-3">
+      <!-- التاريخ -->
+      <div style="background: linear-gradient(135deg, #7B241C, var(--history)); border-radius: var(--radius-xl); padding: 2rem; color: white; position: relative; overflow: hidden; transition: var(--transition);"
+           onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+        <div style="font-size: 3.5rem; margin-bottom: 1rem;">📜</div>
+        <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 0.75rem;">التاريخ</h3>
+        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem; line-height: 1.7; margin-bottom: 1.5rem;">
+          6 دروس تشمل النازية، الحرب العالمية الثانية، القضية الفلسطينية، والتاريخ المغربي
+        </p>
+        <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:1.5rem;">
+          <span style="background:rgba(255,255,255,0.15); padding:0.2rem 0.6rem; border-radius:20px; font-size:0.75rem;">6 دروس</span>
+          <span style="background:rgba(255,255,255,0.15); padding:0.2rem 0.6rem; border-radius:20px; font-size:0.75rem;">30 سؤال</span>
+        </div>
+        <a href="lessons.html#history" style="background:rgba(255,255,255,0.15); color:white; padding:0.6rem 1.25rem; border-radius:var(--radius); text-decoration:none; font-weight:600; font-size:0.9rem; display:inline-block; border:1px solid rgba(255,255,255,0.2); transition:var(--transition);"
+           onmouseover="this.style.background='rgba(255,255,255,0.25)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'">
+          استعرض الدروس ←
+        </a>
+      </div>
+
+      <!-- الجغرافيا -->
+      <div style="background: linear-gradient(135deg, #0E3460, var(--geography)); border-radius: var(--radius-xl); padding: 2rem; color: white; position: relative; overflow: hidden; transition: var(--transition);"
+           onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+        <div style="font-size: 3.5rem; margin-bottom: 1rem;">🗺️</div>
+        <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 0.75rem;">الجغرافيا</h3>
+        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem; line-height: 1.7; margin-bottom: 1.5rem;">
+          6 دروس تشمل القوى الكبرى (أمريكا، اليابان، روسيا) ونماذج تنموية عالمية
+        </p>
+        <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:1.5rem;">
+          <span style="background:rgba(255,255,255,0.15); padding:0.2rem 0.6rem; border-radius:20px; font-size:0.75rem;">6 دروس</span>
+          <span style="background:rgba(255,255,255,0.15); padding:0.2rem 0.6rem; border-radius:20px; font-size:0.75rem;">30 سؤال</span>
+        </div>
+        <a href="lessons.html#geography" style="background:rgba(255,255,255,0.15); color:white; padding:0.6rem 1.25rem; border-radius:var(--radius); text-decoration:none; font-weight:600; font-size:0.9rem; display:inline-block; border:1px solid rgba(255,255,255,0.2); transition:var(--transition);"
+           onmouseover="this.style.background='rgba(255,255,255,0.25)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'">
+          استعرض الدروس ←
+        </a>
+      </div>
+
+      <!-- المواطنة -->
+      <div style="background: linear-gradient(135deg, #0B5226, var(--citizenship)); border-radius: var(--radius-xl); padding: 2rem; color: white; position: relative; overflow: hidden; transition: var(--transition);"
+           onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+        <div style="font-size: 3.5rem; margin-bottom: 1rem;">⚖️</div>
+        <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 0.75rem;">التربية على المواطنة</h3>
+        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem; line-height: 1.7; margin-bottom: 1.5rem;">
+          6 دروس حول التراث والموارد الطبيعية والتضامن الدولي والسلم العالمي
+        </p>
+        <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:1.5rem;">
+          <span style="background:rgba(255,255,255,0.15); padding:0.2rem 0.6rem; border-radius:20px; font-size:0.75rem;">6 دروس</span>
+          <span style="background:rgba(255,255,255,0.15); padding:0.2rem 0.6rem; border-radius:20px; font-size:0.75rem;">30 سؤال</span>
+        </div>
+        <a href="lessons.html#citizenship" style="background:rgba(255,255,255,0.15); color:white; padding:0.6rem 1.25rem; border-radius:var(--radius); text-decoration:none; font-weight:600; font-size:0.9rem; display:inline-block; border:1px solid rgba(255,255,255,0.2); transition:var(--transition);"
+           onmouseover="this.style.background='rgba(255,255,255,0.25)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'">
+          استعرض الدروس ←
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== آخر الدروس ===== -->
+<section class="section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">جميع الدروس</h2>
+        <p class="section-subtitle">18 درساً مصنفاً حسب المجال — ابدأ بأي درس تريده</p>
+      </div>
+      <div class="filter-tabs">
+        <button class="filter-tab active-all" data-domain="">الكل</button>
+        <button class="filter-tab" data-domain="history">📜 التاريخ</button>
+        <button class="filter-tab" data-domain="geography">🗺️ الجغرافيا</button>
+        <button class="filter-tab" data-domain="citizenship">⚖️ المواطنة</button>
+      </div>
+    </div>
+
+    <div class="cards-grid">
+      <!-- دروس التاريخ -->
+      <a href="lessons/history/nazisme.html" class="lesson-card history" data-lesson-id="nazisme">
+        <div class="lesson-card-domain"></div>
+        <div class="lesson-card-body">
+          <span class="lesson-card-number">1</span>
+          <h3 class="lesson-card-title">ظاهرة الأنظمة الديكتاتورية: النازية نموذجاً</h3>
+          <p class="lesson-card-desc">دراسة أسباب ظهور النازية في ألمانيا وخصائصها ونتائجها</p>
+        </div>
+        <div class="lesson-card-footer">
+          <span class="lesson-card-badge">📜 التاريخ</span>
+          <span class="lesson-reviewed-badge">✅ تمت المراجعة</span>
+        </div>
+      </a>
+
+      <a href="lessons/history/ww2.html" class="lesson-card history" data-lesson-id="ww2">
+        <div class="lesson-card-domain"></div>
+        <div class="lesson-card-body">
+          <span class="lesson-card-number">2</span>
+          <h3 class="lesson-card-title">الحرب العالمية الثانية: الأسباب والنتائج</h3>
+          <p class="lesson-card-desc">مراحل الحرب وأهم المعارك والنتائج السياسية والإنسانية</p>
+        </div>
+        <div class="lesson-card-footer">
+          <span class="lesson-card-badge">📜 التاريخ</span>
+          <span class="lesson-reviewed-badge">✅ تمت المراجعة</span>
+        </div>
+      </a>
+
+      <a href="lessons/history/palestine.html" class="lesson-card history" data-lesson-id="palestine">
+        <div class="lesson-card-domain"></div>
+        <div class="lesson-card-body">
+          <span class="lesson-card-number">3</span>
+          <h3 class="lesson-card-title">القضية الفلسطينية والصراع العربي الإسرائيلي</h3>
+          <p class="lesson-card-desc">جذور القضية الفلسطينية ومراحل الصراع ومحاولات التسوية</p>
+        </div>
+        <div class="lesson-card-footer">
+          <span class="lesson-card-badge">📜 التاريخ</span>
+          <span class="lesson-reviewed-badge">✅ تمت المراجعة</span>
+        </div>
+      </a>
+
+      <a href="lessons/history/independence.html" class="lesson-card history" data-lesson-id="independence">
+        <div class="lesson-card-domain"></div>
+        <div class="lesson-card-body">
+          <span class="lesson-card-number">4</span>
+          <h3 class="lesson-card-title">المغرب: الكفاح من أجل الاستقلال وإتمام الوحدة الترابية</h3>
+          <p class="lesson-card-desc">النضال الوطني، نفي محمد الخامس، الاستقلال، استرجاع الصحراء</p>
+        </div>
+        <div class="lesson-card-footer">
+          <span class="lesson-card-badge">📜 التاريخ</span>
+          <span class="lesson-reviewed-badge">✅ تمت المراجعة</span>
+        </div>
+      </a>
+
+      <a href="lessons/history/moroccan-state.html" class="lesson-card history" data-lesson-id="moroccan-state">
+        <div class="lesson-card-domain"></div>
+        <div class="lesson-card-body">
+          <span class="lesson-card-number">5</span>
+          <h3 class="lesson-card-title">المراحل الكبرى لبناء الدولة المغربية الحديثة</h3>
+          <p class="lesson-card-desc">من الاستقلال إلى اليوم: البناء المؤسسي والسياسي والتنموي</p>
+        </div>
+        <div class="lesson-card-footer">
+          <span class="lesson-card-badge">📜 التاريخ</span>
+          <span class="lesson-reviewed-badge">✅ تمت المراجعة</span>
+        </div>
+      </a>
+
+      <a href="lessons/history/resistance.html" class="lesson-card history" data-lesson-id="resistance">
+        <div class="lesson-card-domain"></div>
+        <div class="lesson-card-body">
+          <span class="lesson-card-number">6</span>
+          <h3 class="lesson-card-title">ملف حول المقاومة المغربية</h3>
+          <p class="lesson-card-desc">أشكال المقاومة ضد الاستعمار وأبرز الشهداء والمقاومين</p>
+        </div>
+        <div class="lesson-card-footer">
+          <span class="lesson-card-badge">📜 التاريخ</span>
+          <span class="lesson-reviewed-badge">✅ تمت المراجعة</span>
+        </div>
+      </a>
+
+      <!-- دروس الجغرافيا -->
+      <a href="lessons/geography/usa.html" class="lesson-card geography" data-lesson-id="usa">
+        <div class="lesson-card-domain"></div>
+        <div class="lesson-card-body">
+          <span class="lesson-card-number">1</span>
+          <h3 class="lesson-card-title">الولايات المتحدة الأمريكية: قوة عالمية</h3>
+          <p class="lesson-card-desc">مقومات القوة الأمريكية الاقتصادية والتكنولوجية والعسكرية</p>
+        </div>
+        <div class="lesson-card-footer">
+          <span class="lesson-card-badge">🗺️ الجغرافيا</span>
+          <span class="lesson-reviewed-badge">✅ تمت المراجعة</span>
+        </div>
+      </a>
+
+      <a href="lessons/geography/japan.html" class="lesson-card geography" data-lesson-id="japan">
+        <div class="lesson-card-domain"></div>
+        <div class="lesson-card-body">
+          <span class="lesson-card-number">2</span>
+          <h3 class="lesson-card-title">اليابان: قوة تكنولوجية</h3>
+          <p class="lesson-card-desc">المعجزة الاقتصادية اليابانية ومقومات التقدم التكنولوجي</p>
+        </div>
+        <div class="lesson-card-footer">
+          <span class="lesson-card-badge">🗺️ الجغرافيا</span>
+          <span class="lesson-reviewed-badge">✅ تمت المراجعة</span>
+        </div>
+      </a>
+
+      <a href="lessons/geography/russia.html" class="lesson-card geography" data-lesson-id="russia">
+        <div class="lesson-card-domain"></div>
+        <div class="lesson-card-body">
+          <span class="lesson-card-number">3</span>
+          <h3 class="lesson-card-title">روسيا: رهانات التحول</h3>
+          <p class="lesson-card-desc">من الاتحاد السوفيتي إلى روسيا الاتحادية: الثروات والتحديات</p>
+        </div>
+        <div class="lesson-card-footer">
+          <span class="lesson-card-badge">🗺️ الجغرافيا</span>
+          <span class="lesson-reviewed-badge">✅ تمت المراجعة</span>
+        </div>
+      </a>
+
+      <a href="lessons/geography/egypt.html" class="lesson-card geography" data-lesson-id="egypt">
+        <div class="lesson-card-domain"></div>
+        <div class="lesson-card-body">
+          <span class="lesson-card-number">4</span>
+          <h3 class="lesson-card-title">مصر: نموذج تنموي عربي</h3>
+          <p class="lesson-card-desc">التحديات التنموية، نهر النيل، السياحة والفلاحة والصناعة</p>
+        </div>
+        <div class="lesson-card-footer">
+          <span class="lesson-card-badge">🗺️ الجغرافيا</span>
+          <span class="lesson-reviewed-badge">✅ تمت المراجعة</span>
+        </div>
+      </a>
+
+      <a href="lessons/geography/nigeria.html" class="lesson-card geography" data-lesson-id="nigeria">
+        <div class="lesson-card-domain"></div>
+        <div class="lesson-card-body">
+          <span class="lesson-card-number">5</span>
+          <h3 class="lesson-card-title">نيجيريا: بين الغنى الطبيعي والضعف التنموي</h3>
+          <p class="lesson-card-desc">البترول والثروات وتحديات الفقر والصراعات في نيجيريا</p>
+        </div>
+        <div class="lesson-card-footer">
+          <span class="lesson-card-badge">🗺️ الجغرافيا</span>
+          <span class="lesson-reviewed-badge">✅ تمت المراجعة</span>
+        </div>
+      </a>
+
+      <a href="lessons/geography/economic-phenomenon.html" class="lesson-card geography" data-lesson-id="economic-phenomenon">
+        <div class="lesson-card-domain"></div>
+        <div class="lesson-card-body">
+          <span class="lesson-card-number">6</span>
+          <h3 class="lesson-card-title">التدرب على معالجة ظاهرة اقتصادية بالنهج الجغرافي</h3>
+          <p class="lesson-card-desc">خطوات المنهج الجغرافي وتحليل الوثائق والخرائط والجداول</p>
+        </div>
+        <div class="lesson-card-footer">
+          <span class="lesson-card-badge">🗺️ الجغرافيا</span>
+          <span class="lesson-reviewed-badge">✅ تمت المراجعة</span>
+        </div>
+      </a>
+
+      <!-- دروس المواطنة -->
+      <a href="lessons/citizenship/heritage.html" class="lesson-card citizenship" data-lesson-id="heritage">
+        <div class="lesson-card-domain"></div>
+        <div class="lesson-card-body">
+          <span class="lesson-card-number">1</span>
+          <h3 class="lesson-card-title">الحفاظ على التراث وتطويره</h3>
+          <p class="lesson-card-desc">مفهوم التراث المادي واللامادي ودور اليونسكو والهوية الثقافية</p>
+        </div>
+        <div class="lesson-card-footer">
+          <span class="lesson-card-badge">⚖️ المواطنة</span>
+          <span class="lesson-reviewed-badge">✅ تمت المراجعة</span>
+        </div>
+      </a>
+
+      <a href="lessons/citizenship/natural-resources.html" class="lesson-card citizenship" data-lesson-id="natural-resources">
+        <div class="lesson-card-domain"></div>
+        <div class="lesson-card-body">
+          <span class="lesson-card-number">2</span>
+          <h3 class="lesson-card-title">الحفاظ على الموارد الطبيعية</h3>
+          <p class="lesson-card-desc">التهديدات البيئية وآليات الحفاظ على الموارد للأجيال القادمة</p>
+        </div>
+        <div class="lesson-card-footer">
+          <span class="lesson-card-badge">⚖️ المواطنة</span>
+          <span class="lesson-reviewed-badge">✅ تمت المراجعة</span>
+        </div>
+      </a>
+
+      <a href="lessons/citizenship/world-sharing.html" class="lesson-card citizenship" data-lesson-id="world-sharing">
+        <div class="lesson-card-domain"></div>
+        <div class="lesson-card-body">
+          <span class="lesson-card-number">3</span>
+          <h3 class="lesson-card-title">نحن والعالم: نتقاسم الكرة الأرضية</h3>
+          <p class="lesson-card-desc">التضامن الدولي، التفاوتات بين الشمال والجنوب، المنظمات الدولية</p>
+        </div>
+        <div class="lesson-card-footer">
+          <span class="lesson-card-badge">⚖️ المواطنة</span>
+          <span class="lesson-reviewed-badge">✅ تمت المراجعة</span>
+        </div>
+      </a>
+
+      <a href="lessons/citizenship/religions-dialogue.html" class="lesson-card citizenship" data-lesson-id="religions-dialogue">
+        <div class="lesson-card-domain"></div>
+        <div class="lesson-card-body">
+          <span class="lesson-card-number">4</span>
+          <h3 class="lesson-card-title">المغرب وحوار الأديان</h3>
+          <p class="lesson-card-desc">الإسلام الوسطي والتعايش الديني ودور المغرب في حوار الحضارات</p>
+        </div>
+        <div class="lesson-card-footer">
+          <span class="lesson-card-badge">⚖️ المواطنة</span>
+          <span class="lesson-reviewed-badge">✅ تمت المراجعة</span>
+        </div>
+      </a>
+
+      <a href="lessons/citizenship/world-peace.html" class="lesson-card citizenship" data-lesson-id="world-peace">
+        <div class="lesson-card-domain"></div>
+        <div class="lesson-card-body">
+          <span class="lesson-card-number">5</span>
+          <h3 class="lesson-card-title">المغرب والسلم العالمي</h3>
+          <p class="lesson-card-desc">مساهمة المغرب في قوات حفظ السلام وحل النزاعات الدولية</p>
+        </div>
+        <div class="lesson-card-footer">
+          <span class="lesson-card-badge">⚖️ المواطنة</span>
+          <span class="lesson-reviewed-badge">✅ تمت المراجعة</span>
+        </div>
+      </a>
+
+      <a href="lessons/citizenship/media-programs.html" class="lesson-card citizenship" data-lesson-id="media-programs">
+        <div class="lesson-card-domain"></div>
+        <div class="lesson-card-body">
+          <span class="lesson-card-number">6</span>
+          <h3 class="lesson-card-title">اقتراح برامج إعلامية للنهوض بقيم المواطنة</h3>
+          <p class="lesson-card-desc">دور الإعلام في ترسيخ قيم المواطنة ومعايير البرنامج الهادف</p>
+        </div>
+        <div class="lesson-card-footer">
+          <span class="lesson-card-badge">⚖️ المواطنة</span>
+          <span class="lesson-reviewed-badge">✅ تمت المراجعة</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== روابط سريعة ===== -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title" style="margin-bottom: 1.5rem;">🚀 روابط سريعة</h2>
+    <div class="cards-grid-3">
+      <a href="methodology.html" class="card" style="padding:1.5rem; text-decoration:none; color:inherit; display:flex; align-items:center; gap:1rem;">
+        <div style="font-size:2.5rem;">📝</div>
+        <div>
+          <div style="font-weight:700; font-size:1rem; color:var(--text-dark);">المنهجية</div>
+          <div style="font-size:0.85rem; color:var(--text-muted);">تحليل النص، الخريطة، الجدول...</div>
+        </div>
+      </a>
+      <a href="infographics.html" class="card" style="padding:1.5rem; text-decoration:none; color:inherit; display:flex; align-items:center; gap:1rem;">
+        <div style="font-size:2.5rem;">🎨</div>
+        <div>
+          <div style="font-weight:700; font-size:1rem; color:var(--text-dark);">الإنفوغرافيا</div>
+          <div style="font-size:0.85rem; color:var(--text-muted);">ملخصات بصرية لكل درس</div>
+        </div>
+      </a>
+      <a href="exams.html" class="card" style="padding:1.5rem; text-decoration:none; color:inherit; display:flex; align-items:center; gap:1rem;">
+        <div style="font-size:2.5rem;">📋</div>
+        <div>
+          <div style="font-weight:700; font-size:1rem; color:var(--text-dark);">الامتحانات الجهوية</div>
+          <div style="font-size:0.85rem; color:var(--text-muted);">نماذج وعناصر الإجابة</div>
+        </div>
+      </a>
+      <a href="glossary.html" class="card" style="padding:1.5rem; text-decoration:none; color:inherit; display:flex; align-items:center; gap:1rem;">
+        <div style="font-size:2.5rem;">📖</div>
+        <div>
+          <div style="font-weight:700; font-size:1rem; color:var(--text-dark);">قاموس المصطلحات</div>
+          <div style="font-size:0.85rem; color:var(--text-muted);">جميع مفاهيم ومصطلحات المادة</div>
+        </div>
+      </a>
+      <a href="teacher-space.html" class="card" style="padding:1.5rem; text-decoration:none; color:inherit; display:flex; align-items:center; gap:1rem;">
+        <div style="font-size:2.5rem;">👨‍🏫</div>
+        <div>
+          <div style="font-weight:700; font-size:1rem; color:var(--text-dark);">فضاء الأستاذ</div>
+          <div style="font-size:0.85rem; color:var(--text-muted);">أدوات لتدريس المادة بالقسم</div>
+        </div>
+      </a>
+      <a href="progress.html" class="card" style="padding:1.5rem; text-decoration:none; color:inherit; display:flex; align-items:center; gap:1rem;">
+        <div style="font-size:2.5rem;">📊</div>
+        <div>
+          <div style="font-weight:700; font-size:1rem; color:var(--text-dark);">تتبع التقدم</div>
+          <div style="font-size:0.85rem; color:var(--text-muted);">متابعة ما راجعته من دروس</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== توقيع الأستاذ ===== -->
+<section style="background: linear-gradient(135deg, var(--primary-dark), var(--primary)); padding: 3rem 0; text-align:center; color:white;">
+  <div class="container">
+    <div style="font-size:3rem; margin-bottom:1rem;">👨‍🏫</div>
+    <h2 style="font-size:1.6rem; font-weight:800; margin-bottom:0.75rem;">الأستاذ أحمد بوعمود</h2>
+    <p style="color:rgba(255,255,255,0.8); font-size:1rem; margin-bottom:1.5rem;">مؤسسة الحنان — أستاذ مادة الاجتماعيات</p>
+    <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+      <a href="teacher-space.html" class="btn btn-secondary">👨‍🏫 فضاء الأستاذ</a>
+      <a href="resources.html" class="btn btn-primary">🔗 الموارد الخارجية</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== التذييل ===== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand-name">🎓 الاجتماعيات للجميع</div>
+        <p class="brand-desc">
+          منصة تعليمية شاملة لمراجعة مادة الاجتماعيات للثالثة إعدادي،
+          إعداد الأستاذ أحمد بوعمود — مؤسسة الحنان.
+        </p>
+      </div>
+      <div>
+        <h4 class="footer-heading">الدروس</h4>
+        <ul class="footer-links">
+          <li><a href="lessons.html#history">📜 التاريخ</a></li>
+          <li><a href="lessons.html#geography">🗺️ الجغرافيا</a></li>
+          <li><a href="lessons.html#citizenship">⚖️ المواطنة</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-heading">أدوات</h4>
+        <ul class="footer-links">
+          <li><a href="methodology.html">📝 المنهجية</a></li>
+          <li><a href="exams.html">📋 الامتحانات</a></li>
+          <li><a href="exam-night.html">🌙 ليلة الامتحان</a></li>
+          <li><a href="glossary.html">📖 القاموس</a></li>
+          <li><a href="progress.html">📊 التقدم</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025-2026 منصة الاجتماعيات للجميع</span>
+      <span class="footer-signature">إعداد: الأستاذ أحمد بوعمود — مؤسسة الحنان</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+<script>
+  Countdown.init('2026-06-15T09:00:00', 'countdown');
+</script>
+</body>
+</html>

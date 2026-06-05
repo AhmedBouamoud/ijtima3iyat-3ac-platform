@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ijtima3iyat-3ac.netlify.app/sitemap.xml

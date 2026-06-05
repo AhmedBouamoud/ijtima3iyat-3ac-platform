@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تتبع التقدم | الاجتماعيات للجميع</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-brand">
+      <div class="brand-icon">🎓</div>
+      <div class="brand-text"><span class="brand-title">الاجتماعيات للجميع</span><span class="brand-sub">الأستاذ أحمد بوعمود</span></div>
+    </a>
+    <ul class="navbar-nav">
+      <li><a href="index.html">🏠 الرئيسية</a></li>
+      <li><a href="lessons.html">📚 الدروس</a></li>
+      <li><a href="progress.html" class="active">📊 التقدم</a></li>
+    </ul>
+    <div class="navbar-actions"><button class="hamburger">☰</button></div>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">🏠 الرئيسية</a>
+  <a href="lessons.html">📚 الدروس</a>
+  <a href="progress.html">📊 التقدم</a>
+</div>
+
+<main>
+<div style="background:linear-gradient(135deg,var(--primary-dark),var(--primary)); padding:3rem 0; color:white; text-align:center;">
+  <div class="container">
+    <div style="font-size:4rem; margin-bottom:1rem;">📊</div>
+    <h1 style="font-size:2.2rem; font-weight:900; margin-bottom:0.75rem;">تتبع تقدمك في المراجعة</h1>
+    <p style="color:rgba(255,255,255,0.8);">كل درس تراجعه يقربك خطوة من النجاح في الامتحان الجهوي</p>
+    <div style="margin-top:2rem; font-size:4rem; font-weight:900; color:var(--gold-light);" id="bigPercent">0%</div>
+    <div style="color:rgba(255,255,255,0.7); font-size:1rem;" id="bigCount">0 من 18 درساً</div>
+    <div style="max-width:400px; margin:1rem auto 0; height:12px; background:rgba(255,255,255,0.2); border-radius:6px; overflow:hidden;">
+      <div id="bigBar" style="height:100%; width:0%; background:var(--gold-light); border-radius:6px; transition:width 1s ease;"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container" style="padding:2.5rem 1rem;">
+
+  <!-- إحصاءات -->
+  <div class="cards-grid-3" style="margin-bottom:3rem;">
+    <div class="stat-card">
+      <div class="stat-icon red"><span style="font-size:1.75rem;">📜</span></div>
+      <div class="stat-info">
+        <div class="stat-value"><span id="historyCount">0</span>/6</div>
+        <div class="stat-label">دروس التاريخ</div>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon blue"><span style="font-size:1.75rem;">🗺️</span></div>
+      <div class="stat-info">
+        <div class="stat-value"><span id="geographyCount">0</span>/6</div>
+        <div class="stat-label">دروس الجغرافيا</div>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon green"><span style="font-size:1.75rem;">⚖️</span></div>
+      <div class="stat-info">
+        <div class="stat-value"><span id="citizenshipCount">0</span>/6</div>
+        <div class="stat-label">دروس المواطنة</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- قائمة الدروس مع حالتها -->
+  <h2 class="section-title" style="margin-bottom:1.5rem;">📚 حالة كل درس</h2>
+
+  <div id="lessonStatusList" style="display:flex; flex-direction:column; gap:0.75rem;">
+    <!-- ستُملأ بالجافاسكريبت -->
+  </div>
+
+  <!-- إعادة التعيين -->
+  <div style="margin-top:3rem; text-align:center; padding:2rem; background:white; border-radius:var(--radius-xl); box-shadow:var(--shadow-sm);">
+    <div style="font-size:2rem; margin-bottom:1rem;">⚠️</div>
+    <h3 style="margin-bottom:0.5rem; color:var(--text-dark);">إعادة تعيين التقدم</h3>
+    <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:1.5rem;">هذا سيحذف كل علامات "تمت المراجعة". لا يمكن التراجع عن هذه العملية.</p>
+    <button onclick="resetProgress()" class="btn" style="background:var(--history); color:white; padding:0.6rem 1.5rem;">🔄 إعادة التعيين</button>
+  </div>
+
+</div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-bottom">
+      <span>منصة الاجتماعيات للجميع</span>
+      <span class="footer-signature">إعداد: الأستاذ أحمد بوعمود — مؤسسة الحنان</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+<script>
+const allLessons = [
+  { id:'nazisme', title:'ظاهرة الأنظمة الديكتاتورية: النازية', domain:'history', url:'lessons/history/nazisme.html' },
+  { id:'ww2', title:'الحرب العالمية الثانية', domain:'history', url:'lessons/history/ww2.html' },
+  { id:'palestine', title:'القضية الفلسطينية', domain:'history', url:'lessons/history/palestine.html' },
+  { id:'independence', title:'الاستقلال المغربي وإتمام الوحدة الترابية', domain:'history', url:'lessons/history/independence.html' },
+  { id:'moroccan-state', title:'بناء الدولة المغربية الحديثة', domain:'history', url:'lessons/history/moroccan-state.html' },
+  { id:'resistance', title:'المقاومة المغربية', domain:'history', url:'lessons/history/resistance.html' },
+  { id:'usa', title:'الولايات المتحدة: قوة عالمية', domain:'geography', url:'lessons/geography/usa.html' },
+  { id:'japan', title:'اليابان: قوة تكنولوجية', domain:'geography', url:'lessons/geography/japan.html' },
+  { id:'russia', title:'روسيا: رهانات التحول', domain:'geography', url:'lessons/geography/russia.html' },
+  { id:'egypt', title:'مصر: نموذج تنموي عربي', domain:'geography', url:'lessons/geography/egypt.html' },
+  { id:'nigeria', title:'نيجيريا: بين الغنى والضعف التنموي', domain:'geography', url:'lessons/geography/nigeria.html' },
+  { id:'economic-phenomenon', title:'معالجة ظاهرة اقتصادية بالنهج الجغرافي', domain:'geography', url:'lessons/geography/economic-phenomenon.html' },
+  { id:'heritage', title:'الحفاظ على التراث وتطويره', domain:'citizenship', url:'lessons/citizenship/heritage.html' },
+  { id:'natural-resources', title:'الحفاظ على الموارد الطبيعية', domain:'citizenship', url:'lessons/citizenship/natural-resources.html' },
+  { id:'world-sharing', title:'نتقاسم الكرة الأرضية', domain:'citizenship', url:'lessons/citizenship/world-sharing.html' },
+  { id:'religions-dialogue', title:'المغرب وحوار الأديان', domain:'citizenship', url:'lessons/citizenship/religions-dialogue.html' },
+  { id:'world-peace', title:'المغرب والسلم العالمي', domain:'citizenship', url:'lessons/citizenship/world-peace.html' },
+  { id:'media-programs', title:'برامج إعلامية لقيم المواطنة', domain:'citizenship', url:'lessons/citizenship/media-programs.html' },
+];
+
+const domainColors = { history:'var(--history)', geography:'var(--geography)', citizenship:'var(--citizenship)' };
+const domainLabels = { history:'📜 التاريخ', geography:'🗺️ الجغرافيا', citizenship:'⚖️ المواطنة' };
+
+function renderProgress() {
+  const reviewed = Progress.getReviewedIds();
+  const total = allLessons.length;
+  const count = reviewed.length;
+  const pct = Math.round((count / total) * 100);
+
+  document.getElementById('bigPercent').textContent = pct + '%';
+  document.getElementById('bigCount').textContent = count + ' من ' + total + ' درساً';
+  document.getElementById('bigBar').style.width = pct + '%';
+
+  const h = allLessons.filter(l => l.domain === 'history' && reviewed.includes(l.id)).length;
+  const g = allLessons.filter(l => l.domain === 'geography' && reviewed.includes(l.id)).length;
+  const c = allLessons.filter(l => l.domain === 'citizenship' && reviewed.includes(l.id)).length;
+  document.getElementById('historyCount').textContent = h;
+  document.getElementById('geographyCount').textContent = g;
+  document.getElementById('citizenshipCount').textContent = c;
+
+  const list = document.getElementById('lessonStatusList');
+  list.innerHTML = allLessons.map((lesson, i) => {
+    const done = reviewed.includes(lesson.id);
+    return `
+      <div style="display:flex; align-items:center; gap:1rem; padding:1rem 1.25rem; background:${done ? 'var(--citizenship-bg)' : 'white'}; border-radius:var(--radius); box-shadow:var(--shadow-sm); border:1px solid ${done ? 'var(--citizenship-border)' : '#F0F0F0'}; transition:all 0.25s;">
+        <div style="font-size:1.5rem;">${done ? '✅' : '⭕'}</div>
+        <div style="flex:1;">
+          <div style="font-weight:600; font-size:0.9rem; color:var(--text-dark);">${lesson.title}</div>
+          <span style="font-size:0.75rem; color:${domainColors[lesson.domain]}; font-weight:700;">${domainLabels[lesson.domain]}</span>
+        </div>
+        <a href="${lesson.url}" style="background:${domainColors[lesson.domain]}; color:white; padding:0.4rem 0.9rem; border-radius:8px; text-decoration:none; font-size:0.8rem; font-weight:600; flex-shrink:0;">${done ? 'مراجعة مجدداً' : 'ابدأ الدرس'}</a>
+      </div>
+    `;
+  }).join('');
+}
+
+function resetProgress() {
+  if (confirm('هل أنت متأكد من إعادة تعيين كل التقدم؟ لا يمكن التراجع.')) {
+    localStorage.removeItem(Progress.KEY);
+    renderProgress();
+    showToast('تم إعادة تعيين التقدم.', 'info');
+  }
+}
+
+renderProgress();
+</script>
+</body>
+</html>

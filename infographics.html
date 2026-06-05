@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الإنفوغرافيا | الاجتماعيات للجميع</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-brand">
+      <div class="brand-icon">🎓</div>
+      <div class="brand-text"><span class="brand-title">الاجتماعيات للجميع</span><span class="brand-sub">الأستاذ أحمد بوعمود</span></div>
+    </a>
+    <ul class="navbar-nav">
+      <li><a href="index.html">🏠 الرئيسية</a></li>
+      <li><a href="lessons.html">📚 الدروس</a></li>
+      <li><a href="infographics.html" class="active">🎨 الإنفوغرافيا</a></li>
+    </ul>
+    <div class="navbar-actions">
+      <button onclick="window.print()" class="btn-nav">🖨️ طباعة</button>
+      <button class="hamburger">☰</button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">🏠 الرئيسية</a>
+  <a href="lessons.html">📚 الدروس</a>
+  <a href="infographics.html">🎨 الإنفوغرافيا</a>
+</div>
+
+<main>
+<div style="background:linear-gradient(135deg,var(--primary-dark),var(--primary)); padding:3rem 0; color:white;">
+  <div class="container">
+    <h1 style="font-size:2.2rem; font-weight:900; margin-bottom:0.75rem;">🎨 الإنفوغرافيا</h1>
+    <p style="color:rgba(255,255,255,0.8);">ملخصات بصرية مركّزة لكل درس — راجع بسرعة وتذكر أكثر</p>
+  </div>
+</div>
+
+<div class="container" style="padding:2.5rem 1rem;">
+
+  <div class="filter-tabs" style="margin-bottom:2rem;">
+    <button class="filter-tab active-all" data-domain="">الكل</button>
+    <button class="filter-tab" data-domain="history">📜 التاريخ</button>
+    <button class="filter-tab" data-domain="geography">🗺️ الجغرافيا</button>
+    <button class="filter-tab" data-domain="citizenship">⚖️ المواطنة</button>
+  </div>
+
+  <div class="cards-grid">
+
+    <!-- إنفوغرافيا النازية -->
+    <div class="infographic-card history">
+      <div class="infographic-visual" style="background:linear-gradient(135deg,#7B241C,var(--history)); color:white;">🏛️</div>
+      <div class="infographic-body">
+        <span class="badge badge-history" style="margin-bottom:0.75rem; display:inline-block;">📜 التاريخ</span>
+        <h3 style="font-size:1rem; font-weight:700; margin-bottom:0.75rem; color:var(--text-dark);">النازية: ملخص بصري</h3>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:0.4rem; font-size:0.8rem; color:var(--text-muted);">
+          <li>🔴 <strong>1933:</strong> هتلر يصل للسلطة</li>
+          <li>⚠️ <strong>السبب:</strong> أزمة 29 + فرساي</li>
+          <li>👁️ <strong>المميزات:</strong> ديكتاتورية + عنصرية + بروباغندا</li>
+          <li>💀 <strong>النتيجة:</strong> حرب عالمية + هولوكوست</li>
+        </ul>
+        <div style="margin-top:1rem; display:flex; gap:0.5rem;">
+          <a href="lessons/history/nazisme.html" class="btn btn-sm" style="background:var(--history); color:white; flex:1;">الدرس الكامل</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- إنفوغرافيا الحرب العالمية -->
+    <div class="infographic-card history">
+      <div class="infographic-visual" style="background:linear-gradient(135deg,#5D0000,var(--history)); color:white;">⚔️</div>
+      <div class="infographic-body">
+        <span class="badge badge-history" style="margin-bottom:0.75rem; display:inline-block;">📜 التاريخ</span>
+        <h3 style="font-size:1rem; font-weight:700; margin-bottom:0.75rem; color:var(--text-dark);">الحرب العالمية الثانية: ملخص</h3>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:0.4rem; font-size:0.8rem; color:var(--text-muted);">
+          <li>📅 <strong>1939-1945:</strong> أطول وأضخم حرب</li>
+          <li>⚡ <strong>الشرارة:</strong> غزو بولندا</li>
+          <li>🔄 <strong>التحول:</strong> ستالينغراد 1943</li>
+          <li>🕊️ <strong>النهاية:</strong> هيروشيما + الأمم المتحدة</li>
+        </ul>
+        <div style="margin-top:1rem;">
+          <a href="lessons/history/ww2.html" class="btn btn-sm" style="background:var(--history); color:white; width:100%;">الدرس الكامل</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- إنفوغرافيا فلسطين -->
+    <div class="infographic-card history">
+      <div class="infographic-visual" style="background:linear-gradient(135deg,#1a1a2e,#16213e); color:white;">🕊️</div>
+      <div class="infographic-body">
+        <span class="badge badge-history" style="margin-bottom:0.75rem; display:inline-block;">📜 التاريخ</span>
+        <h3 style="font-size:1rem; font-weight:700; margin-bottom:0.75rem; color:var(--text-dark);">القضية الفلسطينية</h3>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:0.4rem; font-size:0.8rem; color:var(--text-muted);">
+          <li>📜 <strong>1917:</strong> وعد بلفور</li>
+          <li>💔 <strong>1948:</strong> النكبة</li>
+          <li>⚔️ <strong>1967:</strong> حرب الأيام الستة</li>
+          <li>✊ <strong>1987:</strong> الانتفاضة الأولى</li>
+        </ul>
+        <div style="margin-top:1rem;">
+          <a href="lessons/history/palestine.html" class="btn btn-sm" style="background:var(--history); color:white; width:100%;">الدرس الكامل</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- إنفوغرافيا أمريكا -->
+    <div class="infographic-card geography">
+      <div class="infographic-visual" style="background:linear-gradient(135deg,#0E3460,var(--geography)); color:white;">🗽</div>
+      <div class="infographic-body">
+        <span class="badge badge-geography" style="margin-bottom:0.75rem; display:inline-block;">🗺️ الجغرافيا</span>
+        <h3 style="font-size:1rem; font-weight:700; margin-bottom:0.75rem; color:var(--text-dark);">أمريكا: قوة عالمية</h3>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:0.4rem; font-size:0.8rem; color:var(--text-muted);">
+          <li>💰 <strong>GDP:</strong> 25 تريليون دولار</li>
+          <li>💻 <strong>التكنولوجيا:</strong> Silicon Valley</li>
+          <li>🛡️ <strong>القوة:</strong> 800 قاعدة عسكرية</li>
+          <li>⚠️ <strong>التحديات:</strong> فوارق اجتماعية + ديون</li>
+        </ul>
+        <div style="margin-top:1rem;">
+          <a href="lessons/geography/usa.html" class="btn btn-sm" style="background:var(--geography); color:white; width:100%;">الدرس الكامل</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- إنفوغرافيا اليابان -->
+    <div class="infographic-card geography">
+      <div class="infographic-visual" style="background:linear-gradient(135deg,#C0392B,#E74C3C); color:white;">🗼</div>
+      <div class="infographic-body">
+        <span class="badge badge-geography" style="margin-bottom:0.75rem; display:inline-block;">🗺️ الجغرافيا</span>
+        <h3 style="font-size:1rem; font-weight:700; margin-bottom:0.75rem; color:var(--text-dark);">اليابان: قوة تكنولوجية</h3>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:0.4rem; font-size:0.8rem; color:var(--text-muted);">
+          <li>🔧 <strong>القوة:</strong> الكيرتسو + التقنية</li>
+          <li>📈 <strong>المعجزة:</strong> نهوض بعد 1945</li>
+          <li>👴 <strong>التحدي:</strong> شيخوخة السكان</li>
+          <li>🌊 <strong>طبيعي:</strong> زلازل + أعاصير</li>
+        </ul>
+        <div style="margin-top:1rem;">
+          <a href="lessons/geography/japan.html" class="btn btn-sm" style="background:var(--geography); color:white; width:100%;">الدرس الكامل</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- إنفوغرافيا التراث -->
+    <div class="infographic-card citizenship">
+      <div class="infographic-visual" style="background:linear-gradient(135deg,#0B5226,var(--citizenship)); color:white;">🏺</div>
+      <div class="infographic-body">
+        <span class="badge badge-citizenship" style="margin-bottom:0.75rem; display:inline-block;">⚖️ المواطنة</span>
+        <h3 style="font-size:1rem; font-weight:700; margin-bottom:0.75rem; color:var(--text-dark);">الحفاظ على التراث</h3>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:0.4rem; font-size:0.8rem; color:var(--text-muted);">
+          <li>🏛️ <strong>مادي:</strong> مباني، آثار، مخطوطات</li>
+          <li>🎵 <strong>لامادي:</strong> موسيقى، عادات، حرف</li>
+          <li>🌍 <strong>اليونسكو:</strong> حماية التراث العالمي</li>
+          <li>🇲🇦 <strong>المغرب:</strong> جامعة القرويين، مراكش...</li>
+        </ul>
+        <div style="margin-top:1rem;">
+          <a href="lessons/citizenship/heritage.html" class="btn btn-sm" style="background:var(--citizenship); color:white; width:100%;">الدرس الكامل</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- إنفوغرافيا السلم -->
+    <div class="infographic-card citizenship">
+      <div class="infographic-visual" style="background:linear-gradient(135deg,#1E8449,#52B788); color:white;">🕊️</div>
+      <div class="infographic-body">
+        <span class="badge badge-citizenship" style="margin-bottom:0.75rem; display:inline-block;">⚖️ المواطنة</span>
+        <h3 style="font-size:1rem; font-weight:700; margin-bottom:0.75rem; color:var(--text-dark);">المغرب والسلم العالمي</h3>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:0.4rem; font-size:0.8rem; color:var(--text-muted);">
+          <li>🪖 <strong>قوات السلام:</strong> مشاركة في الأمم المتحدة</li>
+          <li>🤝 <strong>الوساطة:</strong> حل النزاعات الإفريقية</li>
+          <li>☮️ <strong>حوار الأديان:</strong> نموذج للتسامح</li>
+          <li>🌍 <strong>مبادئ:</strong> التعاون والتضامن</li>
+        </ul>
+        <div style="margin-top:1rem;">
+          <a href="lessons/citizenship/world-peace.html" class="btn btn-sm" style="background:var(--citizenship); color:white; width:100%;">الدرس الكامل</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="alert alert-info" style="margin-top:2rem;">
+    <span>🎨</span>
+    <span>سيتم إضافة إنفوغرافيا مصوّرة لكل الدروس الـ18 في التحديثات القادمة. يمكن طباعة هذه البطاقات كورقة مراجعة مركّزة.</span>
+  </div>
+
+</div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-bottom">
+      <span>منصة الاجتماعيات للجميع</span>
+      <span class="footer-signature">إعداد: الأستاذ أحمد بوعمود — مؤسسة الحنان</span>
+    </div>
+  </div>
+</footer>
+<script src="js/app.js"></script>
+</body>
+</html>

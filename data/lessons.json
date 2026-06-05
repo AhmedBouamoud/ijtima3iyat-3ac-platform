@@ -1,0 +1,208 @@
+{
+  "lessons": [
+    {
+      "id": "nazisme",
+      "domain": "history",
+      "order": 1,
+      "title": "ظاهرة الأنظمة الديكتاتورية: النازية نموذجاً",
+      "shortTitle": "النازية",
+      "description": "دراسة أسباب ظهور الأنظمة الديكتاتورية في أوروبا وخصائص النظام النازي في ألمانيا ونتائجه",
+      "emoji": "🏛️",
+      "url": "lessons/history/nazisme.html",
+      "keywords": ["النازية", "هتلر", "الديكتاتورية", "ألمانيا", "الفاشية", "الهولوكوست"]
+    },
+    {
+      "id": "ww2",
+      "domain": "history",
+      "order": 2,
+      "title": "الحرب العالمية الثانية: الأسباب والنتائج",
+      "shortTitle": "الحرب العالمية الثانية",
+      "description": "أسباب اندلاع الحرب، مراحلها وأهم المعارك، والنتائج السياسية والاقتصادية والإنسانية",
+      "emoji": "⚔️",
+      "url": "lessons/history/ww2.html",
+      "keywords": ["الحرب العالمية", "هيروشيما", "دي داي", "المحور", "التحالف", "أوشفيتز"]
+    },
+    {
+      "id": "palestine",
+      "domain": "history",
+      "order": 3,
+      "title": "القضية الفلسطينية والصراع العربي الإسرائيلي",
+      "shortTitle": "القضية الفلسطينية",
+      "description": "جذور القضية الفلسطينية، مراحل الصراع العربي الإسرائيلي ومحاولات التسوية",
+      "emoji": "🕊️",
+      "url": "lessons/history/palestine.html",
+      "keywords": ["فلسطين", "الصهيونية", "وعد بلفور", "النكبة", "الانتفاضة", "إسرائيل"]
+    },
+    {
+      "id": "independence",
+      "domain": "history",
+      "order": 4,
+      "title": "المغرب: الكفاح من أجل الاستقلال وإتمام الوحدة الترابية",
+      "shortTitle": "الاستقلال المغربي",
+      "description": "مراحل النضال من أجل الاستقلال، دور الحركة الوطنية، نفي محمد الخامس وإتمام الوحدة الترابية",
+      "emoji": "🇲🇦",
+      "url": "lessons/history/independence.html",
+      "keywords": ["الاستقلال", "الحماية", "محمد الخامس", "الحركة الوطنية", "الصحراء"]
+    },
+    {
+      "id": "moroccan-state",
+      "domain": "history",
+      "order": 5,
+      "title": "المراحل الكبرى لبناء الدولة المغربية الحديثة",
+      "shortTitle": "الدولة المغربية الحديثة",
+      "description": "المراحل السياسية والمؤسسية لبناء الدولة المغربية منذ الاستقلال إلى اليوم",
+      "emoji": "🏗️",
+      "url": "lessons/history/moroccan-state.html",
+      "keywords": ["الدستور", "الملكية", "التحديث", "المسيرة الخضراء", "الديمقراطية"]
+    },
+    {
+      "id": "resistance",
+      "domain": "history",
+      "order": 6,
+      "title": "ملف حول المقاومة المغربية",
+      "shortTitle": "المقاومة المغربية",
+      "description": "أشكال المقاومة ضد الاستعمار الفرنسي والإسباني، أبرز الشهداء والمقاومين",
+      "emoji": "✊",
+      "url": "lessons/history/resistance.html",
+      "keywords": ["المقاومة", "الشهيد", "الفدائيون", "الزاوية", "ابن الوليد", "القاوقجي"]
+    },
+    {
+      "id": "usa",
+      "domain": "geography",
+      "order": 1,
+      "title": "الولايات المتحدة الأمريكية: قوة عالمية",
+      "shortTitle": "الولايات المتحدة الأمريكية",
+      "description": "مقومات القوة الأمريكية الاقتصادية والتكنولوجية والعسكرية، وتحدياتها الداخلية",
+      "emoji": "🗽",
+      "url": "lessons/geography/usa.html",
+      "keywords": ["أمريكا", "الناتج الداخلي", "التكنولوجيا", "الهيمنة", "وول ستريت"]
+    },
+    {
+      "id": "japan",
+      "domain": "geography",
+      "order": 2,
+      "title": "اليابان: قوة تكنولوجية",
+      "shortTitle": "اليابان",
+      "description": "المعجزة الاقتصادية اليابانية، مقومات التقدم التكنولوجي، التحديات الديموغرافية",
+      "emoji": "🗼",
+      "url": "lessons/geography/japan.html",
+      "keywords": ["اليابان", "المعجزة الاقتصادية", "التكنولوجيا", "الكيرتسو", "الزلازل"]
+    },
+    {
+      "id": "russia",
+      "domain": "geography",
+      "order": 3,
+      "title": "روسيا: رهانات التحول",
+      "shortTitle": "روسيا",
+      "description": "روسيا من الاتحاد السوفيتي إلى الفيدرالية، رهانات التحول الاقتصادي والثروات الطبيعية",
+      "emoji": "🏔️",
+      "url": "lessons/geography/russia.html",
+      "keywords": ["روسيا", "التحول", "الموارد الطبيعية", "الغاز", "البترول", "بوتين"]
+    },
+    {
+      "id": "egypt",
+      "domain": "geography",
+      "order": 4,
+      "title": "مصر: نموذج تنموي عربي",
+      "shortTitle": "مصر",
+      "description": "التحديات التنموية في مصر، الموارد الطبيعية والبشرية، السياحة والفلاحة",
+      "emoji": "🏛️",
+      "url": "lessons/geography/egypt.html",
+      "keywords": ["مصر", "نهر النيل", "السويس", "السياحة", "الأهرامات", "التنمية"]
+    },
+    {
+      "id": "nigeria",
+      "domain": "geography",
+      "order": 5,
+      "title": "نيجيريا: بين الغنى الطبيعي والضعف التنموي",
+      "shortTitle": "نيجيريا",
+      "description": "نيجيريا الغنية بالبترول والثروات الطبيعية، والتحديات التنموية والاجتماعية",
+      "emoji": "🌍",
+      "url": "lessons/geography/nigeria.html",
+      "keywords": ["نيجيريا", "البترول", "أفريقيا", "الفقر", "التنمية", "الصراعات"]
+    },
+    {
+      "id": "economic-phenomenon",
+      "domain": "geography",
+      "order": 6,
+      "title": "التدرب على معالجة ظاهرة اقتصادية بالنهج الجغرافي",
+      "shortTitle": "معالجة ظاهرة اقتصادية",
+      "description": "خطوات المنهج الجغرافي في دراسة الظواهر الاقتصادية وتحليل الوثائق والخرائط",
+      "emoji": "📊",
+      "url": "lessons/geography/economic-phenomenon.html",
+      "keywords": ["المنهج الجغرافي", "الخريطة", "الجدول", "المبيان", "التحليل"]
+    },
+    {
+      "id": "heritage",
+      "domain": "citizenship",
+      "order": 1,
+      "title": "الحفاظ على التراث وتطويره",
+      "shortTitle": "التراث",
+      "description": "مفهوم التراث المادي واللامادي، دور اليونسكو، وضرورة الحفاظ على الهوية الثقافية",
+      "emoji": "🏺",
+      "url": "lessons/citizenship/heritage.html",
+      "keywords": ["التراث", "اليونسكو", "الهوية", "الثقافة", "المادي", "اللامادي"]
+    },
+    {
+      "id": "natural-resources",
+      "domain": "citizenship",
+      "order": 2,
+      "title": "الحفاظ على الموارد الطبيعية",
+      "shortTitle": "الموارد الطبيعية",
+      "description": "أهمية الموارد الطبيعية، التهديدات البيئية، وآليات الحفاظ عليها للأجيال القادمة",
+      "emoji": "🌱",
+      "url": "lessons/citizenship/natural-resources.html",
+      "keywords": ["الموارد", "البيئة", "التلوث", "الاستدامة", "التنوع البيولوجي"]
+    },
+    {
+      "id": "world-sharing",
+      "domain": "citizenship",
+      "order": 3,
+      "title": "نحن والعالم: نتقاسم الكرة الأرضية",
+      "shortTitle": "نتقاسم الكرة الأرضية",
+      "description": "مبادئ التضامن والتعاون الدولي، التفاوتات بين الشمال والجنوب، دور المنظمات الدولية",
+      "emoji": "🌍",
+      "url": "lessons/citizenship/world-sharing.html",
+      "keywords": ["التضامن", "التعاون", "الشمال الجنوب", "الأمم المتحدة", "العولمة"]
+    },
+    {
+      "id": "religions-dialogue",
+      "domain": "citizenship",
+      "order": 4,
+      "title": "المغرب وحوار الأديان",
+      "shortTitle": "حوار الأديان",
+      "description": "مبادئ الإسلام الوسطي، تاريخ التعايش الديني في المغرب، دور المغرب في حوار الحضارات",
+      "emoji": "☮️",
+      "url": "lessons/citizenship/religions-dialogue.html",
+      "keywords": ["حوار الأديان", "التسامح", "الإسلام الوسطي", "التعايش", "الحضارات"]
+    },
+    {
+      "id": "world-peace",
+      "domain": "citizenship",
+      "order": 5,
+      "title": "المغرب والسلم العالمي",
+      "shortTitle": "السلم العالمي",
+      "description": "مساهمة المغرب في قوات حفظ السلام، دوره في حل النزاعات الإقليمية والدولية",
+      "emoji": "🕊️",
+      "url": "lessons/citizenship/world-peace.html",
+      "keywords": ["السلم", "حفظ السلام", "الأمم المتحدة", "النزاعات", "التسوية"]
+    },
+    {
+      "id": "media-programs",
+      "domain": "citizenship",
+      "order": 6,
+      "title": "اقتراح برامج إعلامية تتوخى النهوض بقيم المواطنة",
+      "shortTitle": "برامج إعلامية للمواطنة",
+      "description": "دور الإعلام في ترسيخ قيم المواطنة، معايير البرنامج الهادف، الوعي الإعلامي",
+      "emoji": "📺",
+      "url": "lessons/citizenship/media-programs.html",
+      "keywords": ["الإعلام", "المواطنة", "البرامج", "الوعي", "التربية الإعلامية"]
+    }
+  ],
+  "domains": {
+    "history": { "label": "التاريخ", "color": "#C0392B", "emoji": "📜", "count": 6 },
+    "geography": { "label": "الجغرافيا", "color": "#1A5276", "emoji": "🗺️", "count": 6 },
+    "citizenship": { "label": "التربية على المواطنة", "color": "1E8449", "emoji": "⚖️", "count": 6 }
+  },
+  "examDate": "2026-06-15"
+}

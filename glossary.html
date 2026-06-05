@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>قاموس المصطلحات | الاجتماعيات للجميع</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-brand">
+      <div class="brand-icon">🎓</div>
+      <div class="brand-text"><span class="brand-title">الاجتماعيات للجميع</span><span class="brand-sub">الأستاذ أحمد بوعمود</span></div>
+    </a>
+    <ul class="navbar-nav">
+      <li><a href="index.html">🏠 الرئيسية</a></li>
+      <li><a href="lessons.html">📚 الدروس</a></li>
+      <li><a href="methodology.html">📝 المنهجية</a></li>
+      <li><a href="glossary.html" class="active">📖 القاموس</a></li>
+    </ul>
+    <div class="navbar-actions">
+      <button onclick="window.print()" class="btn-nav">🖨️ طباعة</button>
+      <button class="hamburger">☰</button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">🏠 الرئيسية</a>
+  <a href="lessons.html">📚 الدروس</a>
+  <a href="glossary.html">📖 القاموس</a>
+</div>
+
+<main>
+<div style="background:linear-gradient(135deg,var(--primary-dark),var(--primary)); padding:3rem 0; color:white;">
+  <div class="container">
+    <h1 style="font-size:2.2rem; font-weight:900; margin-bottom:0.75rem;">📖 قاموس المصطلحات</h1>
+    <p style="color:rgba(255,255,255,0.8);">جميع مفاهيم ومصطلحات مادة الاجتماعيات للثالثة إعدادي</p>
+  </div>
+</div>
+
+<div class="container" style="padding:2.5rem 1rem;">
+
+  <!-- شريط البحث -->
+  <div style="margin-bottom:2rem;">
+    <div class="search-container" style="max-width:100%;">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="glossarySearch" class="search-input" placeholder="ابحث عن مصطلح...">
+    </div>
+  </div>
+
+  <!-- فلاتر -->
+  <div class="filter-tabs" style="margin-bottom:2rem;">
+    <button class="filter-tab active-all" onclick="filterGlossary('')">الكل</button>
+    <button class="filter-tab" onclick="filterGlossary('history')" style="color:var(--history); border-color:var(--history);">📜 التاريخ</button>
+    <button class="filter-tab" onclick="filterGlossary('geography')" style="color:var(--geography); border-color:var(--geography);">🗺️ الجغرافيا</button>
+    <button class="filter-tab" onclick="filterGlossary('citizenship')" style="color:var(--citizenship); border-color:var(--citizenship);">⚖️ المواطنة</button>
+  </div>
+
+  <!-- مصطلحات التاريخ -->
+  <section class="glossary-section" data-domain="history" style="margin-bottom:3rem;">
+    <h2 style="display:flex; align-items:center; gap:0.75rem; font-size:1.3rem; font-weight:800; color:var(--history); margin-bottom:1.5rem; padding-bottom:0.75rem; border-bottom:2px solid var(--history-border);">
+      <span>📜</span> مصطلحات التاريخ
+    </h2>
+    <div class="terms-grid" id="historyTerms">
+      <div class="term-card" data-domain="history"><div class="term-name" style="color:var(--history);">الديكتاتورية</div><div class="term-def">نظام حكم يتمركز فيه كل السلطة في يد شخص أو حزب واحد دون محاسبة أو رقابة شعبية.</div></div>
+      <div class="term-card" data-domain="history"><div class="term-name" style="color:var(--history);">النازية</div><div class="term-def">أيديولوجية سياسية ظهرت في ألمانيا قامت على القومية المتطرفة والعنصرية والديكتاتورية بقيادة هتلر.</div></div>
+      <div class="term-card" data-domain="history"><div class="term-name" style="color:var(--history);">الفاشية</div><div class="term-def">نظام سياسي شمولي ظهر في إيطاليا مع موسوليني يعتمد القومية المتطرفة والحكم الاستبدادي.</div></div>
+      <div class="term-card" data-domain="history"><div class="term-name" style="color:var(--history);">الهولوكوست</div><div class="term-def">الإبادة الجماعية المنهجية التي نفّذها النازيون بحق اليهود وفئات أخرى راح ضحيتها أكثر من 6 ملايين.</div></div>
+      <div class="term-card" data-domain="history"><div class="term-name" style="color:var(--history);">البروباغندا</div><div class="term-def">أسلوب التأثير في الرأي العام بنشر معلومات منحازة لخدمة أهداف سياسية معينة.</div></div>
+      <div class="term-card" data-domain="history"><div class="term-name" style="color:var(--history);">معاهدة فرساي</div><div class="term-def">معاهدة السلام عام 1919 التي أنهت الحرب العالمية الأولى وفرضت شروطاً مُذلة على ألمانيا.</div></div>
+      <div class="term-card" data-domain="history"><div class="term-name" style="color:var(--history);">قوى المحور</div><div class="term-def">تحالف ألمانيا وإيطاليا واليابان في الحرب العالمية الثانية ضد دول الحلفاء.</div></div>
+      <div class="term-card" data-domain="history"><div class="term-name" style="color:var(--history);">الصهيونية</div><div class="term-def">حركة سياسية ظهرت في القرن 19 تدعو إلى إنشاء دولة يهودية في فلسطين.</div></div>
+      <div class="term-card" data-domain="history"><div class="term-name" style="color:var(--history);">النكبة</div><div class="term-def">الكارثة التي حلّت بالفلسطينيين عام 1948 جراء تهجيرهم القسري وإنشاء دولة إسرائيل.</div></div>
+      <div class="term-card" data-domain="history"><div class="term-name" style="color:var(--history);">وعد بلفور</div><div class="term-def">وثيقة أصدرها وزير الخارجية البريطاني عام 1917 تتعهد بإنشاء وطن قومي لليهود في فلسطين.</div></div>
+      <div class="term-card" data-domain="history"><div class="term-name" style="color:var(--history);">الانتداب البريطاني</div><div class="term-def">الوصاية البريطانية على فلسطين (1920-1948) بموجب قرار عصبة الأمم.</div></div>
+      <div class="term-card" data-domain="history"><div class="term-name" style="color:var(--history);">الحماية</div><div class="term-def">نظام استعماري يُبقي للبلد المُستعمَر سيادته الشكلية بينما يُحكم الاستعمار قبضته الفعلية.</div></div>
+      <div class="term-card" data-domain="history"><div class="term-name" style="color:var(--history);">المسيرة الخضراء</div><div class="term-def">مسيرة سلمية نظمها المغرب في 6 نوفمبر 1975 لاسترجاع الأراضي الصحراوية من إسبانيا.</div></div>
+      <div class="term-card" data-domain="history"><div class="term-name" style="color:var(--history);">الوحدة الترابية</div><div class="term-def">سلامة الأراضي الوطنية وتكاملها بما فيها الصحراء المغربية.</div></div>
+      <div class="term-card" data-domain="history"><div class="term-name" style="color:var(--history);">الملكية الدستورية</div><div class="term-def">نظام سياسي يحكم فيه الملك وفق دستور يحدد صلاحياته ويضمن حقوق المواطنين.</div></div>
+    </div>
+  </section>
+
+  <!-- مصطلحات الجغرافيا -->
+  <section class="glossary-section" data-domain="geography" style="margin-bottom:3rem;">
+    <h2 style="display:flex; align-items:center; gap:0.75rem; font-size:1.3rem; font-weight:800; color:var(--geography); margin-bottom:1.5rem; padding-bottom:0.75rem; border-bottom:2px solid var(--geography-border);">
+      <span>🗺️</span> مصطلحات الجغرافيا
+    </h2>
+    <div class="terms-grid">
+      <div class="term-card" data-domain="geography"><div class="term-name" style="color:var(--geography);">الناتج الداخلي الخام</div><div class="term-def">مجموع قيمة السلع والخدمات التي ينتجها بلد ما خلال سنة واحدة.</div></div>
+      <div class="term-card" data-domain="geography"><div class="term-name" style="color:var(--geography);">القطب الأوحد</div><div class="term-def">وصف لنظام دولي تهيمن عليه قوة واحدة، كما كان الحال مع أمريكا بعد انهيار الاتحاد السوفيتي.</div></div>
+      <div class="term-card" data-domain="geography"><div class="term-name" style="color:var(--geography);">الكيرتسو</div><div class="term-def">التكتلات الصناعية الكبرى في اليابان التي تجمع شركات متعددة تحت مظلة واحدة.</div></div>
+      <div class="term-card" data-domain="geography"><div class="term-name" style="color:var(--geography);">المعجزة الاقتصادية</div><div class="term-def">التعبير الذي يصف نهوض اليابان الاقتصادي السريع بعد الحرب العالمية الثانية.</div></div>
+      <div class="term-card" data-domain="geography"><div class="term-name" style="color:var(--geography);">الخوصصة</div><div class="term-def">تحويل ملكية المؤسسات من القطاع العام (الدولة) إلى القطاع الخاص.</div></div>
+      <div class="term-card" data-domain="geography"><div class="term-name" style="color:var(--geography);">الاقتصاد الريعي</div><div class="term-def">اقتصاد يعتمد بشكل رئيسي على استغلال الموارد الطبيعية كالبترول والغاز.</div></div>
+      <div class="term-card" data-domain="geography"><div class="term-name" style="color:var(--geography);">النمو الديموغرافي</div><div class="term-def">الزيادة في عدد السكان خلال فترة زمنية معينة نتيجة الولادات والهجرة.</div></div>
+      <div class="term-card" data-domain="geography"><div class="term-name" style="color:var(--geography);">التنمية غير المتوازنة</div><div class="term-def">وضع تتركز فيه الثروات في مناطق بعينها أو في أيدي فئات قليلة بينما يعاني الباقون الفقر.</div></div>
+      <div class="term-card" data-domain="geography"><div class="term-name" style="color:var(--geography);">المنهج الجغرافي</div><div class="term-def">منهج علمي لدراسة الظواهر الجغرافية يمر بأربع مراحل: الملاحظة، التوصيف، التفسير، التركيب.</div></div>
+      <div class="term-card" data-domain="geography"><div class="term-name" style="color:var(--geography);">الشركات المتعددة الجنسيات</div><div class="term-def">شركات ضخمة تنشط في دول متعددة وتتحكم في سلاسل إنتاج عالمية.</div></div>
+    </div>
+  </section>
+
+  <!-- مصطلحات المواطنة -->
+  <section class="glossary-section" data-domain="citizenship" style="margin-bottom:3rem;">
+    <h2 style="display:flex; align-items:center; gap:0.75rem; font-size:1.3rem; font-weight:800; color:var(--citizenship); margin-bottom:1.5rem; padding-bottom:0.75rem; border-bottom:2px solid var(--citizenship-border);">
+      <span>⚖️</span> مصطلحات التربية على المواطنة
+    </h2>
+    <div class="terms-grid">
+      <div class="term-card" data-domain="citizenship"><div class="term-name" style="color:var(--citizenship);">التراث المادي</div><div class="term-def">الموروثات الثقافية الملموسة كالمباني التاريخية والآثار والمخطوطات والأدوات.</div></div>
+      <div class="term-card" data-domain="citizenship"><div class="term-name" style="color:var(--citizenship);">التراث اللامادي</div><div class="term-def">الموروثات غير الملموسة كالعادات والتقاليد والفنون الشعبية والموسيقى والحرف.</div></div>
+      <div class="term-card" data-domain="citizenship"><div class="term-name" style="color:var(--citizenship);">اليونسكو</div><div class="term-def">منظمة الأمم المتحدة للتربية والعلوم والثقافة — مختصة بحماية التراث العالمي.</div></div>
+      <div class="term-card" data-domain="citizenship"><div class="term-name" style="color:var(--citizenship);">التنمية المستدامة</div><div class="term-def">تلبية احتياجات الحاضر دون المساس بقدرة الأجيال القادمة على تلبية احتياجاتها.</div></div>
+      <div class="term-card" data-domain="citizenship"><div class="term-name" style="color:var(--citizenship);">الموارد المتجددة</div><div class="term-def">موارد طبيعية تتجدد من تلقاء نفسها كالطاقة الشمسية والرياح والمياه.</div></div>
+      <div class="term-card" data-domain="citizenship"><div class="term-name" style="color:var(--citizenship);">الموارد غير المتجددة</div><div class="term-def">موارد طبيعية غير قابلة للتجديد كالبترول والغاز والفحم والمعادن.</div></div>
+      <div class="term-card" data-domain="citizenship"><div class="term-name" style="color:var(--citizenship);">التضامن الدولي</div><div class="term-def">مبدأ يقوم على تعاون الشعوب والدول لمواجهة التحديات المشتركة.</div></div>
+      <div class="term-card" data-domain="citizenship"><div class="term-name" style="color:var(--citizenship);">الإسلام الوسطي</div><div class="term-def">فهم معتدل للإسلام يرفض التطرف ويدعو إلى التسامح والتعايش مع الآخر.</div></div>
+      <div class="term-card" data-domain="citizenship"><div class="term-name" style="color:var(--citizenship);">حوار الأديان</div><div class="term-def">التواصل والتفاهم المتبادل بين المعتقدات الدينية المختلفة بهدف نشر ثقافة السلم والتعايش.</div></div>
+      <div class="term-card" data-domain="citizenship"><div class="term-name" style="color:var(--citizenship);">قوات حفظ السلام</div><div class="term-def">قوات عسكرية دولية تعمل تحت إمرة الأمم المتحدة لمنع الصراعات أو وضع حد لها.</div></div>
+      <div class="term-card" data-domain="citizenship"><div class="term-name" style="color:var(--citizenship);">المواطنة</div><div class="term-def">الانتماء الرسمي لدولة ما مع ما يترتب عليه من حقوق وواجبات تجاه الوطن والمجتمع.</div></div>
+      <div class="term-card" data-domain="citizenship"><div class="term-name" style="color:var(--citizenship);">الوعي الإعلامي</div><div class="term-def">القدرة على تحليل ونقد المحتوى الإعلامي وتمييز الصحيح من الزائف.</div></div>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-bottom">
+      <span>منصة الاجتماعيات للجميع</span>
+      <span class="footer-signature">إعداد: الأستاذ أحمد بوعمود — مؤسسة الحنان</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+<script>
+  const glossarySearch = document.getElementById('glossarySearch');
+  if (glossarySearch) {
+    glossarySearch.addEventListener('input', () => {
+      const q = glossarySearch.value.toLowerCase().trim();
+      document.querySelectorAll('.term-card').forEach(card => {
+        card.style.display = (!q || card.textContent.toLowerCase().includes(q)) ? '' : 'none';
+      });
+    });
+  }
+  function filterGlossary(domain) {
+    document.querySelectorAll('.term-card').forEach(card => {
+      card.style.display = (!domain || card.dataset.domain === domain) ? '' : 'none';
+    });
+    document.querySelectorAll('.glossary-section').forEach(section => {
+      section.style.display = (!domain || section.dataset.domain === domain) ? '' : 'none';
+    });
+    document.querySelectorAll('.filter-tab').forEach(tab => tab.className = 'filter-tab');
+  }
+</script>
+</body>
+</html>

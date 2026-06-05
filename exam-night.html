@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ليلة الامتحان | الاجتماعيات للجميع</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-brand">
+      <div class="brand-icon">🎓</div>
+      <div class="brand-text"><span class="brand-title">الاجتماعيات للجميع</span><span class="brand-sub">الأستاذ أحمد بوعمود</span></div>
+    </a>
+    <ul class="navbar-nav">
+      <li><a href="index.html">🏠 الرئيسية</a></li>
+      <li><a href="lessons.html">📚 الدروس</a></li>
+      <li><a href="methodology.html">📝 المنهجية</a></li>
+      <li><a href="exams.html">📋 الامتحانات</a></li>
+      <li><a href="exam-night.html" class="active">🌙 ليلة الامتحان</a></li>
+    </ul>
+    <div class="navbar-actions">
+      <button onclick="window.print()" class="btn-nav">🖨️ طباعة</button>
+      <button class="hamburger">☰</button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">🏠 الرئيسية</a>
+  <a href="lessons.html">📚 الدروس</a>
+  <a href="methodology.html">📝 المنهجية</a>
+  <a href="exam-night.html">🌙 ليلة الامتحان</a>
+</div>
+
+<main>
+<!-- رأس الصفحة -->
+<div style="background:linear-gradient(135deg,#0D1B2A,#1A3A5C); padding:3rem 0; color:white; text-align:center;">
+  <div class="container">
+    <div style="font-size:4rem; margin-bottom:1rem;">🌙</div>
+    <h1 style="font-size:2.5rem; font-weight:900; margin-bottom:0.75rem;">ليلة الامتحان</h1>
+    <p style="color:rgba(255,255,255,0.8); font-size:1.1rem; max-width:600px; margin:0 auto 2rem;">
+      كل ما تحتاجه في آخر ليلة قبل الامتحان الجهوي — مركّز، سريع، وشامل
+    </p>
+    <!-- عداد تنازلي -->
+    <div class="countdown-grid" id="countdown" style="justify-content:center;">
+      <div class="countdown-item"><span class="countdown-number cd-days">--</span><span class="countdown-label">أياماً</span></div>
+      <div class="countdown-separator">:</div>
+      <div class="countdown-item"><span class="countdown-number cd-hours">--</span><span class="countdown-label">ساعة</span></div>
+      <div class="countdown-separator">:</div>
+      <div class="countdown-item"><span class="countdown-number cd-minutes">--</span><span class="countdown-label">دقيقة</span></div>
+      <div class="countdown-separator">:</div>
+      <div class="countdown-item"><span class="countdown-number cd-seconds">--</span><span class="countdown-label">ثانية</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="container" style="padding:2.5rem 1rem;">
+
+  <!-- خطة المراجعة -->
+  <section style="margin-bottom:3rem;">
+    <h2 class="section-title" style="margin-bottom:1.5rem;">⏰ خطة مراجعة ليلة الامتحان (3 ساعات)</h2>
+    <div class="cards-grid-3">
+      <div style="background:var(--history-bg); border-radius:var(--radius-lg); padding:1.5rem; border-right:4px solid var(--history);">
+        <div style="font-size:1.5rem; font-weight:800; color:var(--history); margin-bottom:0.5rem;">الساعة الأولى</div>
+        <div style="font-size:0.9rem; font-weight:700; color:var(--text-dark); margin-bottom:1rem;">📜 مراجعة التاريخ</div>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:0.5rem; font-size:0.875rem; color:var(--text-muted);">
+          <li>← المصطلحات الأساسية لكل درس</li>
+          <li>← التواريخ المهمة (النازية، الحرب، فلسطين)</li>
+          <li>← مراحل الاستقلال المغربي</li>
+          <li>← أسماء الشخصيات والأماكن</li>
+        </ul>
+      </div>
+      <div style="background:var(--geography-bg); border-radius:var(--radius-lg); padding:1.5rem; border-right:4px solid var(--geography);">
+        <div style="font-size:1.5rem; font-weight:800; color:var(--geography); margin-bottom:0.5rem;">الساعة الثانية</div>
+        <div style="font-size:0.9rem; font-weight:700; color:var(--text-dark); margin-bottom:1rem;">🗺️ مراجعة الجغرافيا</div>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:0.5rem; font-size:0.875rem; color:var(--text-muted);">
+          <li>← مقومات كل قوة عالمية</li>
+          <li>← الأرقام والإحصاءات المهمة</li>
+          <li>← تحديات التنمية في مصر ونيجيريا</li>
+          <li>← منهجية معالجة الظاهرة الاقتصادية</li>
+        </ul>
+      </div>
+      <div style="background:var(--citizenship-bg); border-radius:var(--radius-lg); padding:1.5rem; border-right:4px solid var(--citizenship);">
+        <div style="font-size:1.5rem; font-weight:800; color:var(--citizenship); margin-bottom:0.5rem;">الساعة الثالثة</div>
+        <div style="font-size:0.9rem; font-weight:700; color:var(--text-dark); margin-bottom:1rem;">⚖️ مراجعة المواطنة</div>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:0.5rem; font-size:0.875rem; color:var(--text-muted);">
+          <li>← قيم المواطنة وتعريفاتها</li>
+          <li>← دور المغرب في السلم والحوار</li>
+          <li>← مراجعة منهجية كتابة الفقرة</li>
+          <li>← نوم مبكر والاستيقاظ بهدوء</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- أهم المصطلحات -->
+  <section style="margin-bottom:3rem;">
+    <h2 class="section-title" style="margin-bottom:1.5rem;">📖 أهم المصطلحات التي يجب حفظها</h2>
+    <div class="cards-grid">
+      <div class="exam-night-card">
+        <div class="exam-night-card-header" style="background:var(--history);">📜 مصطلحات التاريخ</div>
+        <ul class="exam-night-list">
+          <li><strong>الديكتاتورية:</strong> حكم الفرد المطلق دون رقابة</li>
+          <li><strong>النازية:</strong> أيديولوجية عنصرية قومية متطرفة</li>
+          <li><strong>الهولوكوست:</strong> الإبادة الجماعية النازية لليهود</li>
+          <li><strong>الحماية:</strong> نظام استعماري يُبقي السيادة الشكلية</li>
+          <li><strong>الصهيونية:</strong> الحركة الداعية لإنشاء دولة يهودية</li>
+          <li><strong>المسيرة الخضراء:</strong> 1975 - استرجاع الأراضي الصحراوية</li>
+          <li><strong>وعد بلفور:</strong> 1917 - وعد بريطانيا لليهود بوطن قومي</li>
+          <li><strong>النكبة:</strong> 1948 - تهجير الفلسطينيين</li>
+        </ul>
+      </div>
+      <div class="exam-night-card">
+        <div class="exam-night-card-header" style="background:var(--geography);">🗺️ مصطلحات الجغرافيا</div>
+        <ul class="exam-night-list">
+          <li><strong>الناتج الداخلي الخام:</strong> مجموع ما ينتجه البلد سنوياً</li>
+          <li><strong>القطب الأوحد:</strong> هيمنة قوة واحدة على النظام الدولي</li>
+          <li><strong>الكيرتسو:</strong> التكتلات الاقتصادية الكبرى في اليابان</li>
+          <li><strong>التنمية المستدامة:</strong> تلبية الحاضر دون الإضرار بالمستقبل</li>
+          <li><strong>الخوصصة:</strong> تحويل الملكية من العام إلى الخاص</li>
+          <li><strong>النمو الديموغرافي:</strong> الزيادة السريعة في عدد السكان</li>
+          <li><strong>التنمية غير المتوازنة:</strong> ثروات في يد القلة والفقر يطال الكثيرين</li>
+          <li><strong>المنهج الجغرافي:</strong> ملاحظة، توصيف، تفسير، تركيب</li>
+        </ul>
+      </div>
+      <div class="exam-night-card">
+        <div class="exam-night-card-header" style="background:var(--citizenship);">⚖️ مصطلحات المواطنة</div>
+        <ul class="exam-night-list">
+          <li><strong>التراث المادي:</strong> المباني والآثار والأشياء الملموسة</li>
+          <li><strong>التراث اللامادي:</strong> العادات والموسيقى والحرف اليدوية</li>
+          <li><strong>الإسلام الوسطي:</strong> فهم معتدل ومتسامح للإسلام</li>
+          <li><strong>التضامن الدولي:</strong> التعاون بين الشعوب لمواجهة التحديات</li>
+          <li><strong>حفظ السلام:</strong> قوات أممية لمنع الصراعات</li>
+          <li><strong>الموارد المتجددة:</strong> موارد تتجدد طبيعياً كالشمس والماء</li>
+          <li><strong>التعايش:</strong> العيش المشترك بين الأديان والثقافات</li>
+          <li><strong>قيم المواطنة:</strong> الانتماء والمشاركة والمسؤولية</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- أهم التواريخ -->
+  <section style="margin-bottom:3rem;">
+    <h2 class="section-title" style="margin-bottom:1.5rem;">📅 أهم التواريخ (لا تنساها!)</h2>
+    <div style="background:white; border-radius:var(--radius-xl); box-shadow:var(--shadow); overflow:hidden;">
+      <div style="display:grid; grid-template-columns:auto 1fr; gap:0;">
+        <!-- تواريخ مهمة -->
+        <div style="background:var(--history-bg); padding:1.5rem; border-left:1px solid #f0f0f0;">
+          <h3 style="color:var(--history); font-weight:800; margin-bottom:1rem; font-size:0.95rem;">📜 التاريخ</h3>
+          <div style="display:flex; flex-direction:column; gap:0.6rem; font-size:0.85rem;">
+            <div><strong style="color:var(--history);">1919</strong> — معاهدة فرساي، تأسيس الحزب النازي</div>
+            <div><strong style="color:var(--history);">1929</strong> — أزمة الكساد الاقتصادي العالمي</div>
+            <div><strong style="color:var(--history);">1933</strong> — وصول هتلر للسلطة</div>
+            <div><strong style="color:var(--history);">1939</strong> — اندلاع الحرب العالمية الثانية</div>
+            <div><strong style="color:var(--history);">1945</strong> — نهاية الحرب، تأسيس الأمم المتحدة</div>
+            <div><strong style="color:var(--history);">1917</strong> — وعد بلفور</div>
+            <div><strong style="color:var(--history);">1948</strong> — النكبة الفلسطينية</div>
+            <div><strong style="color:var(--history);">1967</strong> — حرب الأيام الستة</div>
+            <div><strong style="color:var(--history);">1912</strong> — معاهدة الحماية على المغرب</div>
+            <div><strong style="color:var(--history);">1944</strong> — وثيقة الاستقلال المغربية</div>
+            <div><strong style="color:var(--history);">1953</strong> — نفي السلطان محمد الخامس</div>
+            <div><strong style="color:var(--history);">1956</strong> — استقلال المغرب</div>
+            <div><strong style="color:var(--history);">1975</strong> — المسيرة الخضراء</div>
+          </div>
+        </div>
+        <div style="background:white; padding:1.5rem;">
+          <h3 style="color:var(--citizenship); font-weight:800; margin-bottom:1rem; font-size:0.95rem;">⚖️ المواطنة والجغرافيا</h3>
+          <div style="display:flex; flex-direction:column; gap:0.6rem; font-size:0.85rem;">
+            <div><strong style="color:var(--citizenship);">1945</strong> — ميثاق الأمم المتحدة</div>
+            <div><strong style="color:var(--citizenship);">1948</strong> — الإعلان العالمي لحقوق الإنسان</div>
+            <div><strong style="color:var(--citizenship);">1972</strong> — مؤتمر ستوكهولم للبيئة</div>
+            <div><strong style="color:var(--citizenship);">1992</strong> — قمة الأرض في ريو</div>
+            <div><strong style="color:var(--citizenship);">2015</strong> — اتفاقية باريس للمناخ</div>
+            <div><strong style="color:var(--geography);">1991</strong> — انهيار الاتحاد السوفيتي</div>
+            <div><strong style="color:var(--geography);">1941-1945</strong> — التفوق التقني في الحرب</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- أخطاء يجب تجنبها -->
+  <section style="margin-bottom:3rem;">
+    <h2 class="section-title" style="margin-bottom:1.5rem;">⚠️ أخطاء شائعة — تجنبها!</h2>
+    <div class="cards-grid-2">
+      <div class="alert alert-error" style="flex-direction:column; gap:0.75rem; align-items:flex-start;">
+        <strong>🚫 في التاريخ:</strong>
+        <ul style="margin-right:1rem; display:flex; flex-direction:column; gap:0.5rem; font-size:0.9rem;">
+          <li>لا تخلط بين النازية (ألمانيا) والفاشية (إيطاليا)</li>
+          <li>لا تنسَ أن الاستقلال المغربي كان 1956 (ليس 1955)</li>
+          <li>وعد بلفور 1917 (ليس 1947)</li>
+          <li>النكبة 1948 (ليس 1947 — 1947 هو قرار التقسيم)</li>
+        </ul>
+      </div>
+      <div class="alert alert-warning" style="flex-direction:column; gap:0.75rem; align-items:flex-start;">
+        <strong>⚠️ في الجغرافيا والمواطنة:</strong>
+        <ul style="margin-right:1rem; display:flex; flex-direction:column; gap:0.5rem; font-size:0.9rem;">
+          <li>لا تخلط بين التراث المادي واللامادي</li>
+          <li>المنهج الجغرافي: ملاحظة ← توصيف ← تفسير ← تركيب</li>
+          <li>روسيا اقتصاد ريعي (يعتمد البترول)، اليابان صناعي</li>
+          <li>نيجيريا غنية بالبترول لكن فقيرة تنموياً</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- نصائح يوم الامتحان -->
+  <section style="margin-bottom:3rem;">
+    <h2 class="section-title" style="margin-bottom:1.5rem;">💪 نصائح يوم الامتحان</h2>
+    <div class="cards-grid-3">
+      <div class="card" style="padding:1.5rem; text-align:center;">
+        <div style="font-size:3rem; margin-bottom:1rem;">😴</div>
+        <h3 style="font-weight:700; margin-bottom:0.5rem; color:var(--text-dark);">نَم جيداً</h3>
+        <p style="font-size:0.875rem; color:var(--text-muted);">الدماغ يحتاج للراحة لاسترجاع المعلومات. لا تسهر أكثر من منتصف الليل.</p>
+      </div>
+      <div class="card" style="padding:1.5rem; text-align:center;">
+        <div style="font-size:3rem; margin-bottom:1rem;">📖</div>
+        <h3 style="font-weight:700; margin-bottom:0.5rem; color:var(--text-dark);">اقرأ السؤال جيداً</h3>
+        <p style="font-size:0.875rem; color:var(--text-muted);">لا تتسرع — اقرأ كل سؤال مرتين قبل الإجابة، وحدد ما هو مطلوب بالضبط.</p>
+      </div>
+      <div class="card" style="padding:1.5rem; text-align:center;">
+        <div style="font-size:3rem; margin-bottom:1rem;">✍️</div>
+        <h3 style="font-weight:700; margin-bottom:0.5rem; color:var(--text-dark);">نظّم وقتك</h3>
+        <p style="font-size:0.875rem; color:var(--text-muted);">خصص للتاريخ والجغرافيا والمواطنة وقتاً متساوياً. ابدأ بالأسهل لتبني ثقة.</p>
+      </div>
+      <div class="card" style="padding:1.5rem; text-align:center;">
+        <div style="font-size:3rem; margin-bottom:1rem;">🏗️</div>
+        <h3 style="font-weight:700; margin-bottom:0.5rem; color:var(--text-dark);">هيكل الإجابة</h3>
+        <p style="font-size:0.875rem; color:var(--text-muted);">مقدمة → عرض → خاتمة. استعمل المصطلحات العلمية ولا تنسَ الربط بين الأفكار.</p>
+      </div>
+      <div class="card" style="padding:1.5rem; text-align:center;">
+        <div style="font-size:3rem; margin-bottom:1rem;">🧘</div>
+        <h3 style="font-weight:700; margin-bottom:0.5rem; color:var(--text-dark);">تنفّس بهدوء</h3>
+        <p style="font-size:0.875rem; color:var(--text-muted);">الضغط طبيعي. إذا شعرت بالتوتر خذ نفساً عميقاً — أنت مستعد لهذا الامتحان.</p>
+      </div>
+      <div class="card" style="padding:1.5rem; text-align:center;">
+        <div style="font-size:3rem; margin-bottom:1rem;">🍎</div>
+        <h3 style="font-weight:700; margin-bottom:0.5rem; color:var(--text-dark);">كُل فطوراً جيداً</h3>
+        <p style="font-size:0.875rem; color:var(--text-muted);">لا تذهب للامتحان بمعدة فارغة. الدماغ يحتاج للطاقة للتركيز والتفكير.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- روابط سريعة -->
+  <div style="background:linear-gradient(135deg,var(--primary-dark),var(--primary)); border-radius:var(--radius-xl); padding:2rem; color:white; text-align:center;">
+    <h3 style="font-size:1.4rem; font-weight:800; margin-bottom:1rem;">🔗 مراجعة أخيرة</h3>
+    <p style="color:rgba(255,255,255,0.8); margin-bottom:1.5rem;">راجع هذه الصفحات الآن للتأكد</p>
+    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+      <a href="methodology.html" class="btn btn-secondary">📝 المنهجية</a>
+      <a href="glossary.html" class="btn btn-secondary">📖 القاموس</a>
+      <a href="lessons.html" class="btn btn-primary">📚 مراجعة الدروس</a>
+    </div>
+  </div>
+
+</div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-bottom">
+      <span>منصة الاجتماعيات للجميع</span>
+      <span class="footer-signature">إعداد: الأستاذ أحمد بوعمود — مؤسسة الحنان</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+<script>Countdown.init('2026-06-15T09:00:00', 'countdown');</script>
+</body>
+</html>
