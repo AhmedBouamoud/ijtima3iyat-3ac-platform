@@ -383,3 +383,73 @@ document.addEventListener('DOMContentLoaded', () => {
   updateCardReviewStatus();
   Search.init('searchInput', '.lesson-card');
 });
+
+// ─── Notion Sync ───────────────────────────────────────────────────────────
+const NotionSync = {
+  CACHE_KEY: 'notion_lessons_cache',
+  CACHE_TTL: 5 * 60 * 1000, // 5 minutes
+
+  async fetchLessons() {
+    const cached = this._getCache();
+    if (cached) return cached;
+    try {
+      const res = await fetch('/.netlify/functions/notion-sync?type=lessons');
+      if (!res.ok) return null;
+      const data = await res.json();
+      if (data.lessons?.length) {
+        this._setCache(data.lessons);
+        return data.lessons;
+      }
+    } catch {}
+    return null;
+  },
+
+  _getCache() {
+    try {
+      const raw = sessionStorage.getItem(this.CACHE_KEY);
+      if (!raw) return null;
+      const { ts, data } = JSON.parse(raw);
+      if (Date.now() - ts > this.CACHE_TTL) return null;
+      return data;
+    } catch { return null; }
+  },
+
+  _setCache(data) {
+    try { sessionStorage.setItem(this.CACHE_KEY, JSON.stringify({ ts: Date.now(), data })); }
+    catch {}
+  },
+
+  // Inject Notion content into a lesson page
+  async injectLessonContent(lessonTitle) {
+    const box = document.getElementById('notion-content');
+    if (!box) return;
+    const lessons = await this.fetchLessons();
+    if (!lessons) return;
+    const lesson = lessons.find(l =>
+      l.id && lessonTitle && l.id.includes(lessonTitle.slice(0, 8))
+    );
+    if (!lesson) return;
+
+    let html = '';
+    if (lesson.idea)  html += `<div class="notion-block"><strong>💡 الفكرة العامة:</strong><p>${lesson.idea}</p></div>`;
+    if (lesson.terms) html += `<div class="notion-block"><strong>📖 المصطلحات:</strong><p>${lesson.terms}</p></div>`;
+    if (lesson.dates) html += `<div class="notion-block"><strong>📅 التواريخ:</strong><p>${lesson.dates}</p></div>`;
+    if (lesson.teacherNote) html += `<div class="notion-block notion-teacher"><strong>👨‍🏫 ملاحظة الأستاذ:</strong><p>${lesson.teacherNote}</p></div>`;
+
+    if (html) {
+      box.innerHTML = `<div class="notion-sync-box">${html}</div>`;
+      box.style.display = 'block';
+    }
+  },
+
+  // Update exam date from Notion site-config
+  async updateExamDate() {
+    const el = document.getElementById('countdown');
+    if (!el) return;
+    try {
+      const res = await fetch('/data/site-config.json');
+      const cfg = await res.json();
+      if (cfg.examDate) Countdown.init(cfg.examDate, 'countdown');
+    } catch {}
+  }
+};
