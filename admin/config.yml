@@ -17,7 +17,7 @@ collections:
         file: data/site-config.json
         format: json
         fields:
-          - { label: "تاريخ الامتحان الجهوي", name: examDate, widget: datetime, format: "YYYY-MM-DDTHH:mm:ss", hint: "تاريخ ووقت الامتحان الجهوي" }
+          - { label: "تاريخ الامتحان الجهوي", name: examDate, widget: datetime, format: "YYYY-MM-DDTHH:mm:ssZ", hint: "تاريخ ووقت الامتحان الجهوي (التوقيت المغربي UTC+1)" }
           - { label: "السنة الدراسية", name: schoolYear, widget: string }
           - { label: "اسم الأستاذ", name: teacherName, widget: string }
           - { label: "اسم المؤسسة", name: institutionName, widget: string }
