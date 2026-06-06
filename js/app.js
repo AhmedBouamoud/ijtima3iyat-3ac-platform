@@ -382,6 +382,7 @@ document.addEventListener('DOMContentLoaded', () => {
   updateProgressDisplay();
   updateCardReviewStatus();
   Search.init('searchInput', '.lesson-card');
+  NotionSync.injectLessonContent(); // auto-runs on lesson pages only
 });
 
 // ─── Notion Sync ───────────────────────────────────────────────────────────
@@ -419,26 +420,43 @@ const NotionSync = {
     catch {}
   },
 
-  // Inject Notion content into a lesson page
-  async injectLessonContent(lessonTitle) {
-    const box = document.getElementById('notion-content');
-    if (!box) return;
+  // Auto-inject Notion content into a lesson page (called automatically from DOMContentLoaded)
+  async injectLessonContent() {
+    const conceptBox = document.querySelector('.concept-box');
+    if (!conceptBox) return; // not a lesson page
+
     const lessons = await this.fetchLessons();
     if (!lessons) return;
+
+    const slug = window.location.pathname.split('/').pop().replace('.html', '');
     const lesson = lessons.find(l =>
-      l.id && lessonTitle && l.id.includes(lessonTitle.slice(0, 8))
+      (l.slug && l.slug === slug) ||
+      (l.url && (l.url.includes(`/${slug}.html`) || l.url.endsWith(`/${slug}`)))
     );
     if (!lesson) return;
 
-    let html = '';
-    if (lesson.idea)  html += `<div class="notion-block"><strong>💡 الفكرة العامة:</strong><p>${lesson.idea}</p></div>`;
-    if (lesson.terms) html += `<div class="notion-block"><strong>📖 المصطلحات:</strong><p>${lesson.terms}</p></div>`;
-    if (lesson.dates) html += `<div class="notion-block"><strong>📅 التواريخ:</strong><p>${lesson.dates}</p></div>`;
-    if (lesson.teacherNote) html += `<div class="notion-block notion-teacher"><strong>👨‍🏫 ملاحظة الأستاذ:</strong><p>${lesson.teacherNote}</p></div>`;
+    // Update الفكرة العامة in place
+    if (lesson.idea) {
+      const p = conceptBox.querySelector('p');
+      if (p) p.textContent = lesson.idea;
+    }
 
-    if (html) {
-      box.innerHTML = `<div class="notion-sync-box">${html}</div>`;
-      box.style.display = 'block';
+    // Teacher note — insert/update right after concept box
+    if (lesson.teacherNote) {
+      let noteEl = document.getElementById('notion-teacher-note');
+      if (!noteEl) {
+        noteEl = document.createElement('div');
+        noteEl.id = 'notion-teacher-note';
+        noteEl.className = 'notion-block notion-teacher';
+        conceptBox.insertAdjacentElement('afterend', noteEl);
+      }
+      noteEl.innerHTML = '';
+      const strong = document.createElement('strong');
+      strong.textContent = '👨‍🏫 ملاحظة الأستاذ:';
+      const p = document.createElement('p');
+      p.textContent = lesson.teacherNote;
+      noteEl.appendChild(strong);
+      noteEl.appendChild(p);
     }
   },
 

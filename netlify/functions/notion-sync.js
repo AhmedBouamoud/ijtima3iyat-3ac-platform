@@ -56,18 +56,23 @@ exports.handler = async (event) => {
 
     let result;
     if (type === 'lessons') {
-      result = data.results.map(p => ({
-        id:          prop(p, 'العنوان', 'title'),
-        domain:      prop(p, 'المجال', 'select'),
-        order:       prop(p, 'الترتيب', 'number'),
-        idea:        prop(p, 'الفكرة العامة', 'text'),
-        axes:        prop(p, 'المحاور', 'text'),
-        terms:       prop(p, 'المصطلحات الأساسية', 'text'),
-        dates:       prop(p, 'التواريخ المهمة', 'text'),
-        url:         prop(p, 'رابط الدرس', 'url'),
-        status:      prop(p, 'حالة الإنجاز', 'select'),
-        teacherNote: prop(p, 'ملاحظات الأستاذ', 'text')
-      })).filter(l => l.id);
+      result = data.results.map(p => {
+        const url = prop(p, 'رابط الدرس', 'url') || '';
+        const slug = url.split('/').pop().replace('.html', '') || '';
+        return {
+          id:          prop(p, 'العنوان', 'title'),
+          slug,
+          domain:      prop(p, 'المجال', 'select'),
+          order:       prop(p, 'الترتيب', 'number'),
+          idea:        prop(p, 'الفكرة العامة', 'text'),
+          axes:        prop(p, 'المحاور', 'text'),
+          terms:       prop(p, 'المصطلحات الأساسية', 'text'),
+          dates:       prop(p, 'التواريخ المهمة', 'text'),
+          url,
+          status:      prop(p, 'حالة الإنجاز', 'select'),
+          teacherNote: prop(p, 'ملاحظات الأستاذ', 'text')
+        };
+      }).filter(l => l.id);
     } else {
       result = data.results.map(p => ({
         title: prop(p, 'العنوان', 'title') || prop(p, 'title', 'title'),
