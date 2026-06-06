@@ -1,0 +1,22 @@
+{
+  "summaries": [
+    { "id": "nazisme",              "title": "ملخص درس النازية",                              "driveUrl": "" },
+    { "id": "ww2",                  "title": "ملخص الحرب العالمية الثانية",                   "driveUrl": "" },
+    { "id": "palestine",            "title": "ملخص القضية الفلسطينية",                        "driveUrl": "" },
+    { "id": "independence",         "title": "ملخص درس الاستقلال المغربي",                    "driveUrl": "" },
+    { "id": "moroccan-state",       "title": "ملخص بناء الدولة المغربية الحديثة",             "driveUrl": "" },
+    { "id": "resistance",           "title": "ملخص درس المقاومة المغربية",                    "driveUrl": "" },
+    { "id": "usa",                  "title": "ملخص درس الولايات المتحدة الأمريكية",           "driveUrl": "" },
+    { "id": "japan",                "title": "ملخص درس اليابان",                              "driveUrl": "" },
+    { "id": "russia",               "title": "ملخص درس روسيا",                                "driveUrl": "" },
+    { "id": "egypt",                "title": "ملخص درس مصر",                                  "driveUrl": "" },
+    { "id": "nigeria",              "title": "ملخص درس نيجيريا",                              "driveUrl": "" },
+    { "id": "economic-phenomenon",  "title": "ملخص درس الظاهرة الاقتصادية",                   "driveUrl": "" },
+    { "id": "heritage",             "title": "ملخص درس الحفاظ على التراث",                    "driveUrl": "" },
+    { "id": "natural-resources",    "title": "ملخص درس الموارد الطبيعية",                     "driveUrl": "" },
+    { "id": "world-sharing",        "title": "ملخص درس نتقاسم الكرة الأرضية",                 "driveUrl": "" },
+    { "id": "religions-dialogue",   "title": "ملخص درس حوار الأديان",                         "driveUrl": "" },
+    { "id": "world-peace",          "title": "ملخص درس المغرب والسلم العالمي",                "driveUrl": "" },
+    { "id": "media-programs",       "title": "ملخص درس البرامج الإعلامية للمواطنة",           "driveUrl": "" }
+  ]
+}

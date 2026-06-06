@@ -384,6 +384,45 @@ document.addEventListener('DOMContentLoaded', () => {
   Search.init('searchInput', '.lesson-card');
 });
 
+// ─── ملخص الأستاذ ─────────────────────────────────────────────────────────
+const TeacherSummary = {
+  async init() {
+    const m = window.location.pathname.match(/\/lessons\/[^/]+\/([^/]+)\.html/);
+    if (!m) return;
+    const id = m[1];
+    try {
+      const res = await fetch('/data/summaries.json');
+      if (!res.ok) return;
+      const { summaries } = await res.json();
+      const entry = summaries.find(s => s.id === id);
+      if (!entry || !entry.driveUrl) return;
+
+      const sidebar = document.querySelector('.lesson-sidebar');
+      if (!sidebar) return;
+
+      const card = document.createElement('div');
+      card.className = 'sidebar-card';
+      card.style.cssText = 'border: 2px solid var(--gold); overflow:hidden;';
+      card.innerHTML = `
+        <div class="sidebar-card-header" style="background:linear-gradient(135deg,var(--primary-dark),var(--primary)); color:white;">
+          📄 ملخص الأستاذ
+        </div>
+        <div class="sidebar-card-body" style="text-align:center;">
+          <a href="${entry.driveUrl}" target="_blank" rel="noopener noreferrer"
+             class="btn btn-primary" style="width:100%; justify-content:center; margin-bottom:0.5rem;">
+            ⬇️ تحميل الملخص
+          </a>
+          <p style="font-size:0.72rem; color:var(--text-muted); line-height:1.5; margin:0;">
+            إعداد الأستاذ أحمد بوعمود<br>مؤسسة الحنان
+          </p>
+        </div>`;
+      sidebar.insertBefore(card, sidebar.firstChild);
+    } catch {}
+  }
+};
+
+document.addEventListener('DOMContentLoaded', () => TeacherSummary.init());
+
 // ─── Notion Sync ───────────────────────────────────────────────────────────
 const NotionSync = {
   CACHE_KEY: 'notion_lessons_cache',

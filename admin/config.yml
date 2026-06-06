@@ -52,6 +52,23 @@ collections:
               - { label: "النقطة الرابعة", name: point4, widget: string }
               - { label: "رابط الدرس", name: lessonUrl, widget: string, hint: "مثال: lessons/history/nazisme.html" }
 
+  - name: summaries_collection
+    label: "📄 ملخصات الأستاذ"
+    files:
+      - name: summaries
+        label: "روابط ملخصات الأستاذ (Drive)"
+        file: data/summaries.json
+        format: json
+        fields:
+          - label: "الملخصات"
+            name: summaries
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "معرف الدرس", name: id, widget: string, hint: "لا تعدّل هذا الحقل (nazisme, ww2, ...)", pattern: ['^[a-z-]+$', "حروف لاتينية وشرطات فقط"] }
+              - { label: "اسم الملخص", name: title, widget: string }
+              - { label: "رابط Google Drive", name: driveUrl, widget: string, hint: "الصق رابط المشاركة من Google Drive هنا (أو اتركه فارغاً)" }
+
   - name: quizzes
     label: "❓ أسئلة الاختبارات"
     files:
