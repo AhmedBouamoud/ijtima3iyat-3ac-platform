@@ -4,9 +4,17 @@
 [dev]
   publish = "."
 
+[functions]
+  directory = "netlify/functions"
+
 # Netlify Identity + Git Gateway for CMS
 [identity]
   enabled = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 404
 
 [[headers]]
   for = "/*"

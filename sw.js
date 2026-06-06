@@ -16,6 +16,8 @@ const ASSETS = [
   '/css/main.css',
   '/js/app.js',
   '/data/lessons.json',
+  '/data/quizzes.json',
+  '/data/site-config.json',
   '/manifest.webmanifest',
   '/lessons/history/nazisme.html',
   '/lessons/history/ww2.html',
