@@ -8,6 +8,10 @@
 [identity]
   enabled = true
 
+# متغيرات البيئة — أضف قيمها الحقيقية في لوحة Netlify (Site settings > Environment variables)
+# GOOGLE_SHEETS_API_KEY = "AIza..."
+# GOOGLE_SHEETS_ID      = "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms"
+
 [[headers]]
   for = "/*"
   [headers.values]

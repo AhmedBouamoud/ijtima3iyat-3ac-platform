@@ -384,6 +384,51 @@ document.addEventListener('DOMContentLoaded', () => {
   Search.init('searchInput', '.lesson-card');
 });
 
+// ─── Google Sheets Sync ────────────────────────────────────────────────────
+const SheetsSync = {
+  CACHE_TTL: 5 * 60 * 1000,
+
+  async fetch(type) {
+    const cacheKey = `sheets_${type}`;
+    try {
+      const cached = sessionStorage.getItem(cacheKey);
+      if (cached) {
+        const { ts, data } = JSON.parse(cached);
+        if (Date.now() - ts < this.CACHE_TTL) return data;
+      }
+    } catch {}
+
+    try {
+      const res = await fetch(`/.netlify/functions/sheets-sync?type=${type}`);
+      if (!res.ok) return null;
+      const json = await res.json();
+      if (json.error || json.configured === false) return null;
+      try { sessionStorage.setItem(cacheKey, JSON.stringify({ ts: Date.now(), data: json })); } catch {}
+      return json;
+    } catch { return null; }
+  },
+
+  async getSummaries() {
+    const sheets = await this.fetch('summaries');
+    if (sheets?.summaries?.length) return sheets.summaries;
+    try {
+      const res = await fetch('/data/summaries.json');
+      const { summaries } = await res.json();
+      return summaries;
+    } catch { return []; }
+  },
+
+  async getInfographics() {
+    const sheets = await this.fetch('infographics');
+    if (sheets?.cards?.length) return sheets.cards;
+    try {
+      const res = await fetch('/data/infographics.json');
+      const { cards } = await res.json();
+      return cards;
+    } catch { return []; }
+  }
+};
+
 // ─── ملخص الأستاذ ─────────────────────────────────────────────────────────
 const TeacherSummary = {
   async init() {
@@ -391,9 +436,7 @@ const TeacherSummary = {
     if (!m) return;
     const id = m[1];
     try {
-      const res = await fetch('/data/summaries.json');
-      if (!res.ok) return;
-      const { summaries } = await res.json();
+      const summaries = await SheetsSync.getSummaries();
       const entry = summaries.find(s => s.id === id);
       if (!entry || !entry.driveUrl) return;
 

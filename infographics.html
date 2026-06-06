@@ -117,8 +117,8 @@
   }
 
   try {
-    const res = await fetch('data/infographics.json');
-    const { cards } = await res.json();
+    const cards = await SheetsSync.getInfographics();
+    if (!cards.length) throw new Error('no cards');
     const sorted = cards.slice().sort((a, b) => (a.order || 0) - (b.order || 0));
     grid.innerHTML = '';
     sorted.forEach(card => grid.appendChild(buildCard(card)));
