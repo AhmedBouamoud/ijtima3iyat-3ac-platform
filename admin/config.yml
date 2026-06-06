@@ -23,6 +23,35 @@ collections:
           - { label: "اسم المؤسسة", name: institutionName, widget: string }
           - { label: "ملاحظات الامتحان", name: examNotes, widget: text }
 
+  - name: infographics_collection
+    label: "🎨 الإنفوغرافيا"
+    files:
+      - name: infographics
+        label: "بطاقات الإنفوغرافيا"
+        file: data/infographics.json
+        format: json
+        fields:
+          - label: "البطاقات"
+            name: cards
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "الترتيب", name: order, widget: number, value_type: int, hint: "رقم ترتيب البطاقة (1 = أول)" }
+              - label: "المجال"
+                name: domain
+                widget: select
+                options:
+                  - { label: "📜 التاريخ", value: "history" }
+                  - { label: "🗺️ الجغرافيا", value: "geography" }
+                  - { label: "⚖️ المواطنة", value: "citizenship" }
+              - { label: "الرمز (إيموجي)", name: emoji, widget: string, hint: "مثال: 🏛️ أو 🕊️" }
+              - { label: "عنوان البطاقة", name: title, widget: string }
+              - { label: "النقطة الأولى", name: point1, widget: string, hint: "مثال: 🔴 **1933:** هتلر يصل للسلطة" }
+              - { label: "النقطة الثانية", name: point2, widget: string }
+              - { label: "النقطة الثالثة", name: point3, widget: string }
+              - { label: "النقطة الرابعة", name: point4, widget: string }
+              - { label: "رابط الدرس", name: lessonUrl, widget: string, hint: "مثال: lessons/history/nazisme.html" }
+
   - name: quizzes
     label: "❓ أسئلة الاختبارات"
     files:
