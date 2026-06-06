@@ -202,7 +202,7 @@
   "domains": {
     "history": { "label": "التاريخ", "color": "#C0392B", "emoji": "📜", "count": 6 },
     "geography": { "label": "الجغرافيا", "color": "#1A5276", "emoji": "🗺️", "count": 6 },
-    "citizenship": { "label": "التربية على المواطنة", "color": "1E8449", "emoji": "⚖️", "count": 6 }
+    "citizenship": { "label": "التربية على المواطنة", "color": "#1E8449", "emoji": "⚖️", "count": 6 }
   },
   "examDate": "2026-06-15"
 }
